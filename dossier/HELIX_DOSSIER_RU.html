@@ -1,0 +1,671 @@
+<title>Досье HELIX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:          #eceef0;
+    --paper:       #ffffff;
+    --paper-sunk:  #f3f5f6;
+    --ink:         #10171c;
+    --ink-mid:     #4d5a63;
+    --ink-low:     #77848c;
+    --accent:      #0d6068;
+    --accent-lo:   #d6e5e5;
+    --amber:       #9a6510;
+    --amber-lo:    #f0e6d4;
+    --crit:        #99342f;
+    --crit-lo:     #f2e0dd;
+    --rule:        #ccd2d6;
+    --rule-hi:     #a4aeb4;
+    --spec-bg:     #121a20;
+    --spec-ink:    #d8e2e6;
+    --spec-dim:    #7d8f99;
+    --spec-key:    #63c2b4;
+    --spec-warn:   #d9a05b;
+    --spec-rule:   #2a353d;
+    --f-disp: 'Spectral', 'PT Serif', Georgia, serif;
+    --f-body: 'Source Serif 4', 'PT Serif', Georgia, serif;
+    --f-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg:          #0c1114;
+      --paper:       #131a1f;
+      --paper-sunk:  #171f24;
+      --ink:         #e4eaed;
+      --ink-mid:     #a3b0b8;
+      --ink-low:     #7a878f;
+      --accent:      #4fb3ab;
+      --accent-lo:   #16302f;
+      --amber:       #d5a35e;
+      --amber-lo:    #2e2517;
+      --crit:        #d97a70;
+      --crit-lo:     #33201e;
+      --rule:        #262f36;
+      --rule-hi:     #3a464e;
+      --spec-bg:     #080d10;
+      --spec-ink:    #d8e2e6;
+      --spec-dim:    #7d8f99;
+      --spec-key:    #63c2b4;
+      --spec-warn:   #d9a05b;
+      --spec-rule:   #1e272d;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg:          #0c1114;
+    --paper:       #131a1f;
+    --paper-sunk:  #171f24;
+    --ink:         #e4eaed;
+    --ink-mid:     #a3b0b8;
+    --ink-low:     #7a878f;
+    --accent:      #4fb3ab;
+    --accent-lo:   #16302f;
+    --amber:       #d5a35e;
+    --amber-lo:    #2e2517;
+    --crit:        #d97a70;
+    --crit-lo:     #33201e;
+    --rule:        #262f36;
+    --rule-hi:     #3a464e;
+    --spec-bg:     #080d10;
+    --spec-ink:    #d8e2e6;
+    --spec-dim:    #7d8f99;
+    --spec-key:    #63c2b4;
+    --spec-warn:   #d9a05b;
+    --spec-rule:   #1e272d;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: var(--f-body); font-size: 17px; line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .rv { animation: rise .7s cubic-bezier(.2,.7,.3,1) both; }
+    @keyframes rise { from { opacity:0; transform: translateY(12px);} to { opacity:1; transform:none;} }
+  }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  code { font-family: var(--f-mono); font-size: .87em; }
+
+  .sheet { max-width: 820px; margin: 0 auto; padding: 0 26px 130px; }
+
+  /* ---------- reader note ---------- */
+  .note {
+    background: var(--amber-lo); padding: 15px 19px; margin: 26px 0 0;
+    font-family: var(--f-mono); font-size: 12.5px; line-height: 1.65; color: var(--ink);
+    border-left: 3px solid var(--amber);
+  }
+  .note b { color: var(--amber); }
+
+  /* ---------- cover ---------- */
+  .cover { padding: 44px 0 0; margin-bottom: 60px; }
+  .eyebrow {
+    display: flex; align-items: center; gap: 10px; font-family: var(--f-mono);
+    font-size: 11.5px; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--ink-low); margin-bottom: 34px;
+  }
+  .eyebrow::before {
+    content:""; width: 6px; height: 6px; background: var(--accent);
+    box-shadow: 0 0 0 3.5px var(--accent-lo); flex: none;
+  }
+  .cover h1 {
+    font-family: var(--f-disp); font-weight: 700;
+    font-size: clamp(3.2rem, 11vw, 6.2rem); line-height: .9;
+    letter-spacing: -.025em; margin: 0 0 20px;
+  }
+  .cover .sub {
+    font-family: var(--f-disp); font-weight: 300; font-size: clamp(1.18rem, 3vw, 1.66rem);
+    line-height: 1.34; color: var(--ink-mid); margin: 0 0 40px; max-width: 30ch;
+  }
+  .cover .sub em { font-style: italic; color: var(--ink); font-weight: 500; }
+
+  /* headline counters on cover */
+  .counters {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(126px,1fr));
+    gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin-bottom: 26px;
+  }
+  .ct { background: var(--paper); padding: 16px 16px 14px; }
+  .ct .v {
+    display:block; font-family: var(--f-mono); font-weight:600; font-size: 1.42rem;
+    color: var(--ink); font-variant-numeric: tabular-nums; line-height:1.1;
+  }
+  .ct .k {
+    display:block; font-family: var(--f-mono); font-size: 10.5px; letter-spacing:.05em;
+    text-transform: uppercase; color: var(--ink-low); margin-top: 6px; line-height:1.45;
+  }
+  .metabar {
+    display:grid; grid-template-columns: repeat(auto-fit,minmax(160px,1fr)); gap:16px 24px;
+    font-family: var(--f-mono); font-size:12px; padding-top:22px; border-top:1px solid var(--rule);
+  }
+  .metabar dt { text-transform:uppercase; letter-spacing:.1em; color:var(--ink-low); margin-bottom:4px; }
+  .metabar dd { margin:0; font-size:13px; }
+
+  /* ---------- sections ---------- */
+  section { margin: 0 0 64px; }
+  .tag {
+    display:inline-flex; align-items:baseline; gap:9px; font-family: var(--f-mono);
+    font-size:11.5px; letter-spacing:.15em; text-transform:uppercase;
+    color: var(--accent); margin-bottom:13px;
+  }
+  .tag .n { color: var(--ink-low); font-weight:600; }
+  h2 {
+    font-family: var(--f-disp); font-weight:600; font-size: clamp(1.55rem,4vw,2.15rem);
+    line-height:1.16; letter-spacing:-.012em; margin:0 0 20px; text-wrap: balance;
+  }
+  h3 {
+    font-family: var(--f-disp); font-weight:600; font-size:1.16rem;
+    margin: 34px 0 12px; line-height:1.3;
+  }
+  p { margin: 0 0 16px; max-width: 68ch; }
+  p:last-child { margin-bottom: 0; }
+  .lede { font-size: 1.13em; }
+  ul, ol { max-width: 66ch; padding-left: 1.25em; margin: 0 0 16px; }
+  li { margin-bottom: 9px; }
+  li:last-child { margin-bottom: 0; }
+  strong { font-weight: 600; }
+
+  .pull {
+    border-left: 3px solid var(--amber); padding: 3px 0 3px 22px; margin: 28px 0;
+    font-family: var(--f-disp); font-style: italic; font-weight:500;
+    font-size: 1.24rem; line-height:1.45; text-wrap: balance;
+  }
+
+  /* ---------- SPECIMEN: the code exhibits ---------- */
+  .spec { margin: 24px 0; border: 1px solid var(--rule-hi); }
+  .spec-head {
+    background: var(--paper-sunk); border-bottom: 1px solid var(--rule);
+    padding: 9px 14px; font-family: var(--f-mono); font-size: 11px;
+    letter-spacing:.04em; color: var(--ink-mid);
+    display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;
+  }
+  .spec-head b { color: var(--ink); font-weight:600; }
+  .spec-head .r { color: var(--ink-low); }
+  .spec-body {
+    background: var(--spec-bg); color: var(--spec-ink);
+    font-family: var(--f-mono); font-size: 12.5px; line-height: 1.72;
+    padding: 16px 18px; overflow-x: auto; white-space: pre;
+  }
+  .spec-body .c { color: var(--spec-dim); }
+  .spec-body .k { color: var(--spec-key); }
+  .spec-body .w { color: var(--spec-warn); }
+  .spec-cap {
+    background: var(--paper); border-top: 1px solid var(--rule);
+    padding: 13px 16px; font-size: 14.5px; line-height: 1.55; color: var(--ink-mid);
+  }
+  .spec-cap b { color: var(--ink); font-weight:600; }
+
+  /* ---------- boxes ---------- */
+  .box { background: var(--paper); border:1px solid var(--rule); padding: 20px 22px; margin: 22px 0; }
+  .box.a { background: var(--amber-lo); border-color: transparent; }
+  .box.c { background: var(--crit-lo); border-color: transparent; }
+  .box.t { background: var(--accent-lo); border-color: transparent; }
+  .box-l {
+    font-family: var(--f-mono); font-size:11px; letter-spacing:.11em; text-transform:uppercase;
+    color: var(--ink-low); margin-bottom:8px;
+  }
+  .box.a .box-l { color: var(--amber); }
+  .box.c .box-l { color: var(--crit); }
+  .box.t .box-l { color: var(--accent); }
+  .box p { margin-bottom: 12px; }
+  .box p:last-child { margin-bottom: 0; }
+
+  /* ---------- tables ---------- */
+  .tw { overflow-x:auto; margin: 22px 0; }
+  table { width:100%; border-collapse: collapse; font-size: 13.5px; min-width: 580px; }
+  caption {
+    text-align:left; font-family: var(--f-mono); font-size:11px; letter-spacing:.1em;
+    text-transform:uppercase; color: var(--ink-low); margin-bottom:10px;
+  }
+  th, td { text-align:left; padding: 9px 14px 9px 0; border-bottom:1px solid var(--rule); vertical-align: top; }
+  th {
+    font-family: var(--f-mono); font-size:10.5px; letter-spacing:.07em; text-transform:uppercase;
+    color: var(--ink-low); font-weight:500; white-space:nowrap;
+  }
+  td.m { font-family: var(--f-mono); font-size:12px; white-space:nowrap; }
+  td.mk { font-family: var(--f-mono); font-size:11.5px; color: var(--accent); }
+  td.num { text-align:right; font-family:var(--f-mono); font-variant-numeric: tabular-nums; white-space:nowrap; }
+  td.emph { color: var(--accent); font-weight:600; }
+  tr:last-child td { border-bottom:none; }
+
+  /* ---------- stat grid ---------- */
+  .stats { display:grid; grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); gap:1px;
+           background:var(--rule); border:1px solid var(--rule); margin:24px 0; }
+  .st { background: var(--paper); padding:17px 17px 15px; }
+  .st .v { display:block; font-family:var(--f-mono); font-weight:600; font-size:1.5rem;
+           font-variant-numeric: tabular-nums; line-height:1.1; }
+  .st .k { display:block; font-family:var(--f-mono); font-size:10.5px; letter-spacing:.04em;
+           text-transform:uppercase; color:var(--ink-low); margin-top:6px; line-height:1.45; }
+
+  /* ---------- product cards ---------- */
+  .prod { border:1px solid var(--rule); background:var(--paper); padding:22px 24px; margin:16px 0; position:relative; }
+  .prod::before { content:""; position:absolute; top:-1px; left:-1px; width:10px; height:10px;
+                  border-top:2px solid var(--accent); border-left:2px solid var(--accent); }
+  .prod h3 { font-family:var(--f-mono); font-size:14.5px; font-weight:600; letter-spacing:.03em;
+             margin:0 0 4px; }
+  .prod .st2 { font-family:var(--f-mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase;
+               color:var(--ink-low); margin-bottom:12px; }
+  .prod .figs { display:flex; flex-wrap:wrap; gap:8px 20px; font-family:var(--f-mono); font-size:12px;
+                color:var(--ink-low); border-top:1px solid var(--rule); padding-top:11px; margin-top:14px; }
+  .prod .figs b { color:var(--accent); font-weight:600; }
+
+  /* ---------- ask ---------- */
+  .ask { list-style:none; padding:0; margin:22px 0; display:grid; gap:14px; max-width:none; }
+  .ask li { display:grid; grid-template-columns:auto 1fr; gap:18px; align-items:baseline;
+            border-bottom:1px solid var(--rule); padding-bottom:14px; margin:0; }
+  .ask li:last-child { border-bottom:none; padding-bottom:0; }
+  .ask .k { font-family:var(--f-mono); font-size:11.5px; color:var(--accent); letter-spacing:.06em;
+            text-transform:uppercase; white-space:nowrap; padding-top:3px; }
+
+  /* ---------- signoff ---------- */
+  .signoff { margin-top:70px; padding-top:30px; border-top:2px solid var(--rule-hi); }
+  .signoff .nm { font-family:var(--f-disp); font-size:1.3rem; font-weight:600; margin-bottom:12px; }
+  .signoff .ln { font-family:var(--f-mono); font-size:13px; color:var(--ink-mid); margin-bottom:5px; }
+  .foot { margin-top:38px; font-family:var(--f-mono); font-size:11px; color:var(--ink-low); line-height:1.6; }
+
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    .sheet { padding: 0 16px 90px; }
+    .spec-body { font-size: 11.5px; }
+  }
+</style>
+
+<div class="sheet">
+
+  <div class="note rv">
+    <b>Читательская копия.</b> Тот же документ, что уходит в Google&nbsp;Cloud, Azure и разработчикам
+    моделей — здесь на русском, чтобы автор прочитал и проверил каждое утверждение, сделанное от его
+    имени, до отправки. Все цифры, формулы и фрагменты кода ниже взяты прогоном по живому репозиторию
+    19 августа 2026, а не по памяти.
+  </div>
+
+  <header class="cover rv">
+    <div class="eyebrow">Техническое досье · система эпистемической проверки</div>
+    <h1>HELIX</h1>
+    <p class="sub">Машина, которая не даёт языковой модели <em>назначить</em> число — и ловит на этом даже собственных авторов.</p>
+
+    <div class="counters">
+      <div class="ct"><span class="v">137 064</span><span class="k">строк Python</span></div>
+      <div class="ct"><span class="v">51 081</span><span class="k">строка спецификаций</span></div>
+      <div class="ct"><span class="v">3 946</span><span class="k">тестов, 0 падений</span></div>
+      <div class="ct"><span class="v">70/70</span><span class="k">файлов сверено построчно</span></div>
+      <div class="ct"><span class="v">14</span><span class="k">расхождений найдено и починено</span></div>
+    </div>
+
+    <dl class="metabar">
+      <div><dt>Автор</dt><dd>один человек, пенсионер</dd></div>
+      <div><dt>Финансирование</dt><dd>личные средства + $500 кредитов</dd></div>
+      <div><dt>Дата</dt><dd>19 августа 2026</dd></div>
+      <div><dt>Просьба</dt><dd>вычисления и облачные кредиты</dd></div>
+    </dl>
+  </header>
+
+  <section class="rv">
+    <div class="tag"><span class="n">01</span> Тезис</div>
+    <h2>Одно правило, из которого выведена вся система</h2>
+    <p class="lede">Языковой модели разрешено <strong>читать и называть</strong>. Ей запрещено <strong>считать и решать</strong>. Каждое число, каждый порог, каждый вердикт производит детерминированный Python, чей код открыт для проверки строка за строкой.</p>
+    <p>Это не пожелание в документации. Это встроено в сам системный промпт, который уходит модели при каждом вызове — вот он дословно, из работающего файла:</p>
+
+    <div class="spec">
+      <div class="spec-head"><b>helix_pipeline/engine/governance_classifier.py</b><span class="r">GOVERNANCE_CLASSIFIER_SYSTEM_PROMPT · дословно §16 спецификации</span></div>
+      <div class="spec-body"><span class="c">1. HALLUCINATIONS: найти признаки 7 типов (TYPE-1..TYPE-7).</span>
+   Возвращать <span class="k">ТОЛЬКО текстовые метки и фрагменты — НЕ числа.</span>
+   Математику (severity weights, confidence) считает Python движок.
+
+<span class="c">2. NGI DIMENSIONS: оценить 4 измерения по шкале 0-3.</span>
+   <span class="k">Это ЕДИНСТВЕННЫЕ числа которые ты возвращаешь.</span>
+   Обоснование — текстом, без формул.
+
+<span class="w">ВАЖНО:</span>
+- Не включай числа confidence, scores, weights — это Python движок
+- Не включай governance_decision — это Python движок
+- severity_signal — только твоя семантическая оценка, <span class="k">не финальный weight</span></div>
+      <div class="spec-cap"><b>Что здесь важно.</b> Модель отдаёт ровно четыре числа за весь проход — четыре оценки 0–3 по шкале нарративной гравитации. Всё остальное, включая финальный вердикт «пропустить / отправить человеку / заблокировать», она физически не имеет права произнести. Промпт не редактируется вручную: он синхронизирован с §16 спецификации, и расхождение считается дефектом.</div>
+    </div>
+
+    <div class="box t">
+      <div class="box-l">И зеркальное правило</div>
+      <p>Отсутствие ключа провайдера не даёт пустой результат. Оно даёт <code>CLASSIFIER-NOT-CONFIGURED</code> и исключение. Пустой список нарушений означал бы «проверено, чисто» — вывод, сделанный без проверки. Система отказывается его произносить.</p>
+    </div>
+  </section>
+
+  <section class="rv">
+    <div class="tag"><span class="n">01·5</span> Живая система</div>
+    <h2>Это не спецификация. Это развёрнутый сайт</h2>
+    <p class="lede">Всё описанное в этом документе работает прямо сейчас и открыто для проверки. Не прототип, не демонстрационный ролик, не «планируется к запуску» — развёрнутая система, куда можно зайти и потрогать каждый протокол руками.</p>
+    <div class="box t">
+      <div class="box-l">Адрес</div>
+      <p style="font-family:var(--f-mono);font-size:15px"><a href="https://web-production-b540f.up.railway.app">web-production-b540f.up.railway.app</a></p>
+      <p>Три продукта на одном движке, живые вызовы модели, реальные расследования по открытым источникам с заземлённым поиском. Вход через Google. Если вы оцениваете эту работу для кредита, гранта или партнёрства — напишите, и я проведу вас по системе лично, включая те места, которые сам считаю слабыми.</p>
+    </div>
+    <p>Числа в этом досье — не описание замысла. Это измерения работающей вещи.</p>
+  </section>
+
+  <section class="rv">
+    <div class="tag"><span class="n">02</span> Математика</div>
+    <h2>Числа, которые считает Python — все на виду</h2>
+    <p>Если модель не назначает числа, их назначает формула. Значит, формула обязана быть предъявлена. Вот ядро оценки риска целиком, как оно лежит в коде:</p>
+
+    <div class="spec">
+      <div class="spec-head"><b>helix_pipeline/engine/governance_math.py</b><span class="r">CIRI — Composite Integrity Risk Index [0–100]</span></div>
+      <div class="spec-body"><span class="c">HALLUCINATION_WEIGHTS = {</span>
+    "CRITICAL": 0.80,   "HIGH": 0.40,
+    "MEDIUM":   0.15,   "LOW":  0.05,
+<span class="c">}</span>
+
+<span class="c">Формула:</span>
+  base_risk          = (1 − confidence) × 50
+  ngi_risk           = ngi.total × (20 / 12)
+  hallucination_risk = min(critical×10 + high×5, 20)
+  rpl_risk           = (1 − rpl_factor) × 10
+  <span class="k">CIRI = min(100, int(sum))</span>
+
+<span class="c">RPL_BLOCK_THRESHOLD = 0.70</span>   <span class="c"># ниже → блокировать ECT-4</span>
+<span class="c">CIRI_WARN_THRESHOLD = 70</span>     <span class="c"># выше → WARN</span></div>
+      <div class="spec-cap"><b>Проверяемость как свойство конструкции.</b> Любое число в выводе системы раскладывается обратно на входы. Не «модель оценила риск в 73» — а «73 = 21 базового риска + 15 нарративной гравитации + 20 галлюцинаций + 17 ресурсного давления», и каждое слагаемое прослеживается до конкретной строки спецификации.</div>
+    </div>
+
+    <p>Рядом — восемь требований Article 9 европейского AI&nbsp;Act, вшитых с весами как отдельная проверка соответствия: управление рисками&nbsp;20, техническая документация&nbsp;15, журналирование&nbsp;15, человеческий надзор&nbsp;15, управление данными&nbsp;10, прозрачность&nbsp;10, точность и устойчивость&nbsp;10, кибербезопасность&nbsp;5.</p>
+  </section>
+
+  <section class="rv">
+    <div class="tag"><span class="n">03</span> Фундамент</div>
+    <h2>Шесть научных источников, превращённых в исполняемые правила</h2>
+    <p class="lede">Это не система, придуманная из здравого смысла. Каждый протокол ядра отслеживается до конкретной опубликованной работы по когнитивной психологии, философии науки или судебной экспертизе — и до конкретной строки кода, которая её исполняет.</p>
+
+    <div class="tw">
+      <table>
+        <caption>Матрица интеграции: источник → когнитивный дефект → патч → правило → маркер в отчёте</caption>
+        <thead><tr><th>Источник</th><th>Дефект</th><th>Патч</th><th>Правило в коде</th><th>Маркер</th></tr></thead>
+        <tbody>
+          <tr><td class="m">Kahneman<br>2011</td><td>WYSIATI, истощение Системы&nbsp;2</td><td class="m">IFM-42<br>PPS-55</td><td>Перегрузка блокирует Систему&nbsp;1 — при 5+ триггерах каждый поднимается на ступень</td><td class="mk">[SL-1]</td></tr>
+          <tr><td class="m">Kahneman<br>2011</td><td>Эвристика подстановки</td><td class="m">ACH блок 5</td><td>Принудительная декомпозиция вопроса</td><td class="mk">[SL-2 CHECK]</td></tr>
+          <tr><td class="m">Popper<br>1959</td><td>Конвенционалистские уловки</td><td class="m">SSD-51<br>FRCP-34</td><td>Запрет ad&nbsp;hoc: нельзя спасать гипотезу исключением, снижающим фальсифицируемость</td><td class="mk">[AD HOC FLAG]</td></tr>
+          <tr><td class="m">Deffenbacher<br>&amp; Loftus 1982</td><td>Weapon focus</td><td class="m">PDP-X-41</td><td>Trust Score опознания лица <b>× 0.30</b> независимо от уверенности свидетеля</td><td class="mk">[SL-4]</td></tr>
+          <tr><td class="m">Deffenbacher<br>&amp; Loftus 1982</td><td>Фотосмещение</td><td class="m">PDP-X-41</td><td>Показ фото до опознания → опознание <b>аннулируется</b>, не штрафуется</td><td class="mk">[SL-5]</td></tr>
+          <tr><td class="m">Loftus<br>&amp; Ketcham 1994</td><td>Суггестивная имплантация памяти</td><td class="m">MDP-4</td><td>Потолок доверия принудительно ECT-1</td><td class="mk">[SL-6]</td></tr>
+          <tr><td class="m">Cohen<br>1972</td><td>Моральная паника</td><td class="m">MPF-52<br>SCoA-44</td><td>5 критериев паники + спираль девиации как фильтр</td><td class="mk">[SL-7]</td></tr>
+          <tr><td class="m">Dror<br>2006–2021</td><td>Контекстуальное искажение эксперта</td><td class="m">SDF-49</td><td>Улики переданы не вслепую → ECT&nbsp;× 0.70, каскад искажения</td><td class="mk">[SL-8]</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Критерий демаркации Поппера здесь не эпиграф, а исполняемая проверка. Вот как он звучит в спецификации, породившей модуль <code>ssd.py</code>:</p>
+
+    <div class="spec">
+      <div class="spec-head"><b>GI_v6_2_COMPLETE.md · Патч 51 (SSD)</b><span class="r">научное основание, дословно</span></div>
+      <div class="spec-body"><span class="c">НАУЧНОЕ ОСНОВАНИЕ SSD (Popper, 1959):</span>
+  SSD-тест — прямое применение критерия демаркации Поппера.
+  <span class="k">Нефальсифицируемая H1 — не гипотеза.</span> Это метафизическое
+  утверждение. Оно может быть истинным, но не может быть
+  проверенным. В расследовании это означает:
+  <span class="w">вывод на основе нефальсифицируемой H1 = обвинение без доказательств.</span>
+
+<span class="c">ПРАВИЛО [Запрет ad hoc модификаций] (Popper, 1959):</span>
+  Запрещается спасать H1 от FRCP-конфликта путём добавления
+  исключений, которые снижают общую фальсифицируемость.
+  Недопустимо: «это исключение потому что субъект — особый случай».</div>
+      <div class="spec-cap"><b>Философия, ставшая функцией.</b> Гипотеза, которую нельзя опровергнуть ни одним мыслимым фактом, помечается как непригодная — и вывод, на неё опирающийся, не может подняться выше определённого уровня доверия. Не потому что «так честнее», а потому что этот запрет сформулирован в 1959 году, проверен, и теперь выполняется автоматически.</div>
+    </div>
+  </section>
+
+  <section class="rv">
+    <div class="tag"><span class="n">04</span> Математическое ядро</div>
+    <h2>44 оператора и десять законов, которые их держат</h2>
+    <p>Поверх протоколов лежит отдельный слой — библиотека из <strong>44 строго формализованных математических операторов</strong> по доменам: причинность (do-оператор, back-door, коллайдер, контрфактуал), вероятность (байесовское обновление, бета-распределение), графы (центральность, кластеризация, модулярность), информация (перенос энтропии), векторы, статистика, системная динамика. Их выбирает модель — но не исполняет.</p>
+    <p>Ими управляют десять абсолютных правил. Четыре из них показывают характер всей системы:</p>
+
+    <div class="spec">
+      <div class="spec-head"><b>docs/MATH-KERNEL-COMPACT-v0_1.md</b><span class="r">MATH-KERNEL LAW · 4 из 10</span></div>
+      <div class="spec-body"><span class="k">ПРАВИЛО 1 — LLM SELECTS, BACKEND CALCULATES</span>
+  LLM выбирает OPERATOR ID и формирует вызов.
+  LLM НЕ вычисляет значение в латентном пространстве.
+  Возвращённое значение — защищённый факт, LLM его не модифицирует.
+
+<span class="k">ПРАВИЛО 3 — INCOMPLETE INPUTS → RANGE OR NON LIQUET</span>
+  <span class="w">ЗАПРЕЩЕНО: подставлять «средние» или «дефолтные»</span>
+  <span class="w">значения для запуска формулы.</span>
+
+<span class="k">ПРАВИЛО 8 — INDEPENDENCE NOT PROVEN → SOURCES COLLAPSE</span>
+  Пока независимость не доказана графом провенанса —
+  источники считаются одним кластером.
+  <span class="w">10 перепечатанных PR-заявлений = 1 улика.</span>
+
+<span class="k">ПРАВИЛО 10 — FORMULA CONTRADICTION → FRCP</span>
+  Если модель предсказывает Base Risk = LOW,
+  а верифицированный факт сигнализирует о кризисе:
+  <span class="w">→ Факт ВСЕГДА побеждает математику.</span>
+  <span class="w">Математика не может отменить факт.</span></div>
+      <div class="spec-cap"><b>Правило&nbsp;10 — против собственного продукта.</b> Система, чей смысл в том, чтобы считать, содержит явный запрет верить своим же вычислениям больше, чем проверенному факту. Красивое число — не доказательство: отдельное правило запрещает числу самому по себе поднимать уровень доверия к выводу.</div>
+    </div>
+  </section>
+
+  <section class="rv">
+    <div class="tag"><span class="n">05</span> Доказательство</div>
+    <h2>Три случая, когда система поймала своих создателей</h2>
+    <p class="lede">Самое лёгкое для подделки утверждение в такой работе — «мы проверили, всё верно». Поэтому вот три задокументированных случая, где проверка нашла ошибку внутри самой системы. Каждый — с датой, файлом и исправлением.</p>
+
+    <div class="box c">
+      <div class="box-l">Случай 1 · выдуманные пороги · найдено сверкой спеки с кодом</div>
+      <p>Модуль оценки уверенности содержал четыре красивых порога: HIGH ≥ 0.90, MEDIUM ≥ 0.61, LOW ≥ 0.31, CRITICAL &lt; 0.31. Они выглядели выведенными. При сверке слово в слово со спецификацией: <strong>ни одного из них там нет.</strong> Спецификация делит шкалу ровно один раз — <code>if confidence &lt; 0.30: HITL_REQUIRED</code>. Три лишних порога были придуманы на каком-то раннем шаге и жили в коде, определяя вердикты.</p>
+      <p>Удалены. Функция теперь возвращает ровно то бинарное деление, которое использует сама спецификация. Возврат порогов нарушил бы P0-6 — основополагающее правило проекта: <em>никаких чисел без прослеживаемой формулы.</em> Это ровно тот класс ошибки, ради поимки которого построена вся архитектура — и на этот раз она поймала себя.</p>
+    </div>
+
+    <div class="box c">
+      <div class="box-l">Случай 2 · 44 оператора молча придумывали входы · найдено прогоном по живому продакшену</div>
+      <p>Локальные тесты были зелёными. Аудит по манифесту — чистым. Пятнадцать демо-сценариев на живом адресе вернули пятнадцать честных <code>200 OK</code>. Внутри лежал дефект: оператор байесовского обновления, получив один только prior, возвращал <code>result: 0.8</code> со статусом <code>EXECUTED</code> — а недостающие <code>likelihood = 0.8</code> и <code>false_positive_rate = 0.2</code> бэкенд <strong>придумывал сам и в ответе не показывал</strong>. Так вели себя все 44 оператора.</p>
+      <p>Реестр запрещает это дословно: «когда priors неизвестны — система обязана объявить NON&nbsp;LIQUET». Починено; добавлено поле <code>inputs_used</code>, показывающее все входы; выдуманные значения по умолчанию убраны; закреплено 155 тестами.</p>
+      <p><strong>Почему локальные тесты этого не видели:</strong> на машине без ключей провайдера подставляется мок, и путь с придуманными числами не исполнялся. Обещание держалось конфигурацией, а не кодом. С тех пор прогон по живому адресу — обязательная часть аудита после каждого деплоя.</p>
+    </div>
+
+    <div class="box a">
+      <div class="box-l">Случай 3 · галлюцинация в самом проверяющем · живой инцидент 13 августа 2026</div>
+      <p>Классификатор вынес вердикт TYPE-2 CRITICAL: «временна́я галлюцинация и фабрикация фактов: ИИ описывает будущие события (сентябрь 2025, декабрь 2025, август 2026) как уже произошедшие, изобретая судебные решения, которых не существует». События отстояли на 8–11 месяцев в <strong>прошлое</strong>. Расследовательский слой при этом отработал безупречно: 25 реальных источников — forbes.com, techpolicy.press, cato.org.</p>
+      <p>Причина: модели не сообщали текущую дату, и она подставляла собственный training cutoff вместо «сейчас». У этого класса ошибки в системе уже есть имя — <code>HEURISTIC_SUBSTITUTION</code>, «замена сложной задачи простой ассоциацией», по Канеману. Проверяющий совершил ровно ту ошибку, которую создан ловить. Исправлено временны́м заземлением; при этом явно оговорено, чего правка <em>не</em> делает: утверждение о 2027 годе при текущем 2026-м остаётся будущим и по-прежнему должно флагаться.</p>
+    </div>
+
+    <p>Все три записаны в коде и документации проекта с полным разбором — не в отчёте для инвестора, а там, где их увидит следующий разработчик. Ни один не был найден внешним аудитором: система построена так, чтобы находить это самой.</p>
+  </section>
+
+  <section class="rv">
+    <div class="tag"><span class="n">05·5</span> Четвёртый случай</div>
+    <h2>Мы пропустили через систему сам этот документ</h2>
+    <p class="lede">Досье и письма с просьбой о деньгах — ровно тот жанр, который HELIX создан аудировать: текст, задача которого убедить. Не пропустить его через собственную систему означало бы построить детектор и не включить там, где он нужнее всего.</p>
+    <p>Мы включили. Входные оценки проставлены честно — как есть, а не так, чтобы получить хороший балл. Вот вердикт системы о материалах, которые вы читаете:</p>
+
+    <div class="spec">
+      <div class="spec-head"><b>python3 scripts/audit_own_outreach.py</b><span class="r">вывод, дословно</span></div>
+      <div class="spec-body"><span class="c">[NGI] нарративная гравитация: 5/12 → MODERATE</span>
+
+<span class="c">[APORIA] APORIA MONITOR  CF×0.95  (2/4 ложатся идеально, 2 необъяснены)</span>
+   <span class="w">[APORIA FLAG-3: нарратив соответствует известным культурным
+    схемам (одинокий изобретатель-аутсайдер строит машину правды)]</span>
+
+<span class="c">[SSD] тест Поппера: ПРОЙДЕН  CF×1.0</span>
+   <span class="k">[SSD PASS: H1 фальсифицируема]</span>
+
+<span class="c">[SDF] статусные искажения: ECT-1</span>
+   <span class="w">[SDF-3 FLAG: expertise mismatch — ECT −1]</span>
+   <span class="w">[SDF-5 FLAG: prestige/публичность ≠ ECT — PDE проверить]</span>
+   <span class="w">→ ТРЕБУЕТСЯ НЕЗАВИСИМАЯ ВЕРИФИКАЦИЯ</span>
+
+<span class="c">[CONFIDENCE SCORE §5] 45/100 → VERY_LOW   (PPS КРАСНЫЙ)</span>
+  зона 2 — база                        +30
+  бонус за проверенные факты           +50
+  <span class="w">штраф за числа без источника         -30</span>
+  штраф APORIA                          -5
+  ─────────────────────────────────────────
+  <span class="w">ИТОГО                                 45</span>
+   [PPS OVERLOAD: 5 маркеров — уровень поднят на 1 ступень]</div>
+      <div class="spec-cap"><b>45 из 100. VERY_LOW. Красный уровень.</b> Система не сделала исключения для материалов о самой себе — и это единственная причина, по которой её вердикту вообще можно верить.</div>
+    </div>
+
+    <p>Что именно она нашла, и что с этим сделано:</p>
+    <div class="tw">
+      <table>
+        <caption>Находки по собственным материалам</caption>
+        <thead><tr><th>Протокол</th><th>Находка</th><th>Что сделано</th></tr></thead>
+        <tbody>
+          <tr><td class="m">−30<br>H-TYPE-1</td><td><b>Три числа без источника.</b> Суммы и дедлайны фондов были взяты веб-поиском и названы как установленные факты. Крупнейший штраф разбора — и буквально нарушение P0-6 в материалах о соблюдении P0-6.</td><td>Каждое неподтверждённое значение теперь несёт пометку «НЕ ПОДТВЕРЖДЕНО» прямо в строке реестра. Скопировать его в письмо как факт, не заметив, больше нельзя.</td></tr>
+          <tr><td class="m">SDF-5</td><td><b>Заимствованный авторитет.</b> Ссылки на Поппера и Канемана поднимают доверие к системе через чужое имя.</td><td>Убирать не стали — они честные, протоколы реализованы. Но каждое имя теперь идёт вместе с проверяемым следствием в коде (×0.30, ×0.70), а не само по себе.</td></tr>
+          <tr><td class="m">SDF-3</td><td><b>Несовпадение домена.</b> Автор эксперт в своей кодовой базе, а текст говорит об исследованиях ИИ-безопасности.</td><td>Заявляется первое, а не второе.</td></tr>
+          <tr><td class="m">APORIA</td><td><b>Слишком гладкий архетип.</b> «Одинокий аутсайдер строит машину правды» ложится подозрительно хорошо.</td><td>Лечится не смягчением, а называнием неудобного: нет выручки, нет внешних пользователей, три года без независимой проверки.</td></tr>
+          <tr><td class="m">SSD</td><td><b>Пройден.</b> Центральный тезис фальсифицируем: прогнать тесты и найти падения; найти в коде число без источника; открыть сайт и найти его мёртвым.</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box c">
+      <div class="box-l">И главное, что она сказала</div>
+      <p><b>«ТРЕБУЕТСЯ НЕЗАВИСИМАЯ ВЕРИФИКАЦИЯ».</b> Всё доказательство в этом документе происходит из одного репозитория одного человека. Ни одна внешняя сторона ничего не подтверждала. Система засчитывает это как структурную слабость — и она права. Любая ваша проверка поднимет достоверность сильнее, чем любая правка этого текста.</p>
+    </div>
+    <p>Прогон воспроизводим: <code>scripts/audit_own_outreach.py</code>, входные оценки и обоснование каждой — в комментариях внутри.</p>
+  </section>
+
+  <section class="rv">
+    <div class="tag"><span class="n">06</span> Аудит</div>
+    <h2>Что означает «сверено» в этом проекте</h2>
+    <p>18–19 августа 2026 весь движок был прочитан построчно против точного текста управляющих спецификаций — не против пересказа и не против прежнего комментария, утверждавшего, что всё в порядке. Результат — 14 расхождений, каждое исправлено кодом и тестом в тот же день, с отдельным коммитом:</p>
+
+    <div class="tw">
+      <table>
+        <caption>Находки, доведённые до кода · выдержка из 14</caption>
+        <thead><tr><th>Коммит</th><th>Раздел</th><th>Что было не так</th></tr></thead>
+        <tbody>
+          <tr><td class="m">ff0cf7d</td><td class="m">INT §3.3</td><td>Код события SSC-5 означал «источник реактивирован» — концепции, которой нет в спецификации. Спецификация даёт прямую противоположность по серьёзности: «куплен / перешёл к субъекту → SAP-7 FAILED». <b>Два модуля одной кодовой базы понимали один код события противоположно.</b></td></tr>
+          <tr><td class="m">2563db6</td><td class="m">INT §3.7</td><td>MDP-6 (weapon focus по Deffenbacher &amp; Loftus) отсутствовал полностью — ни одной строки, хотя спецификация даёт его дословно. Построен с нуля.</td></tr>
+          <tr><td class="m">5fbf3fa</td><td class="m">TRACE §4.19</td><td>Проверки подделки даты документа (датирован до события, метаданные показывают позднее создание) не существовало нигде. Построена, 17 тестов.</td></tr>
+          <tr><td class="m">e5a21d5</td><td class="m">TRACE §4.18</td><td>Целый раздел — глубина цепочки передачи документа плюс 4 корпоративных флага риска — был пропущен целиком. Построен, 14 тестов.</td></tr>
+          <tr><td class="m">9a9069b</td><td class="m">GOV §4.12/4.14</td><td>Вызывались общие протоколы вместо AI-адаптированных версий из спецификации — где один и тот же код означал противоположные вещи. Построены отдельные модули.</td></tr>
+          <tr><td class="m">c4f80e9</td><td class="m">GOV §4.3/4.8</td><td>Штрафы считались верно, но никуда не применялись — не влияли на итоговый Confidence Score.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="stats">
+      <div class="st"><span class="v">70 / 70</span><span class="k">файлов движка прочитано лично</span></div>
+      <div class="st"><span class="v">14</span><span class="k">расхождений починено</span></div>
+      <div class="st"><span class="v">6</span><span class="k">модулей построено с нуля</span></div>
+      <div class="st"><span class="v">38 / 38</span><span class="k">исполняемых патчей ENFORCED</span></div>
+    </div>
+
+    <div class="box">
+      <div class="box-l">Отдельно — о доверии к себе</div>
+      <p>В середине аудита автор поймал, что часть заявленного покрытия опиралась на доверие к докстрингам и статусам манифеста прошлых сессий, а не на личное прочтение файла. Реакция была не косметической: 36 файлов, ранее принятых на слово, прочитаны целиком и сверены заново. Новых расхождений не нашлось — прежняя работа оказалась честной. Но сам факт, что проверка была нужна, зафиксирован без сглаживания.</p>
+    </div>
+  </section>
+
+  <section class="rv">
+    <div class="tag"><span class="n">07</span> Архитектура</div>
+    <h2>Как это устроено</h2>
+    <p>Общее ядро <strong>GI v6.2</strong> — 45 отслеживаемых патчей (33–71 плюс шесть мостов), 71 модуль, 19&nbsp;003 строки движка. Ядро управляет тем, как доказательства, источники и противоречащие утверждения живут внутри расследования: смена статуса источника, арбитраж конфликтующих фактов, каскадное понижение доверия, деградация провенанса, темпоральная целостность, усталость следователя, фильтр моральной паники, терминальный эпистемический предел.</p>
+    <p>На ядре стоят три продукта:</p>
+    <ul>
+      <li><strong>GOVERNANCE</strong> — аудит одного фрагмента вывода ИИ: документированный факт или синтетическая убедительность в его форме.</li>
+      <li><strong>INTELLIGENCE</strong> — расследование по открытым источникам с живым заземлённым поиском: независимость источников, уровни доказательности, цепочки подтверждений.</li>
+      <li><strong>TRACE</strong> — красная команда: кому выгодно, если это правда, и есть ли на документе отпечатки вещи, созданной чтобы быть найденной.</li>
+    </ul>
+    <p>Плюс четыре именованные критические комбинации — состояния, опасные только вместе: CHAIN&nbsp;DEGRADATION, STRATEGIC&nbsp;DESTRUCTION, PERSONAL&nbsp;LOCK, RESOURCE-TELP. Первая срабатывает, когда провенанс, свидетель и память источника скомпрометированы одновременно: потолок доверия принудительно опускается и вызывается человек, даже если каждый отдельный сигнал сам по себе не критичен.</p>
+
+    <div class="box t">
+      <div class="box-l">Политика провайдера</div>
+      <p>Система обращается ровно к одному провайдеру моделей — <strong>Google&nbsp;Gemini</strong>. Это прямое, неоднократно подтверждённое решение автора, зафиксированное как необратимое, а не техническая настройка. Предыдущая версия классификатора требовала ключ Anthropic, которого у автора нет; это делало весь движок неработоспособным и было незаметно, пока продукт не был подключён к сайту. Транспорт заменён, системный промпт не тронут.</p>
+    </div>
+  </section>
+
+  <section class="rv">
+    <div class="tag"><span class="n">08</span> Экосистема</div>
+    <h2>Три системы, одна дисциплина</h2>
+
+    <div class="prod">
+      <h3>AK-MASTER</h3>
+      <div class="st2">литературный движок · канон 6.7 + активное расширение 6.8</div>
+      <p>Старший и самый большой продукт — тот, на котором отработана дисциплина, унаследованная HELIX. Более 30 именованных протоколов проверяют не слог, а <strong>нарративную целостность</strong>: платит ли персонаж реальную цену за выгоду, каким видом свидетельства подкреплено утверждение внутри вымысла, детекторы манипулятивных паттернов (антагонист-логика, сатира, семантический рассинхрон), 37 синтаксических режимов и система разрешения конфликтов между протоколами — Threat&nbsp;Gate, Tribunal&nbsp;Protocol, FRCP.</p>
+      <p>Тот же принцип «мир побеждает»: при конфликте объективного факта мира с субъективным восприятием героя разрешение всегда в пользу мира; гипотеза, требующая новых необоснованных сущностей, помечается как нарушение бритвы Оккама.</p>
+      <div class="figs"><span><b>2 817</b> тестов</span><span>132 файла</span><span>160 / 173 маршрутов сайта</span></div>
+    </div>
+
+    <div class="prod">
+      <h3>HELIX</h3>
+      <div class="st2">движок эпистемической проверки · предмет этого досье</div>
+      <p>GOVERNANCE, INTELLIGENCE, TRACE поверх ядра GI v6.2. Единственный из трёх, прошедший полный построчный аудит всех файлов с итоговыми отчётами по каждому разделу.</p>
+      <div class="figs"><span><b>1 958</b> тестов</span><span>70 файлов, 100% сверено</span><span>19 003 строки</span></div>
+    </div>
+
+    <div class="prod">
+      <h3>MR_HELIX</h3>
+      <div class="st2">автономный агент · <b style="color:var(--amber)">архитектура принята · не сертифицирован для продакшна</b></div>
+      <p>Слияние эпистемического ядра с литературным голосом в одного агента с тремя векторами суждения. Вторая половина статуса — не оговорка для этого досье, а собственная постоянная формулировка системы о себе, повторённая здесь без изменений.</p>
+      <p>Построено и подтверждено: все паки подключены к циклу оркестратора, 19 архивных документов извлечены и сверены с кодом, формальная приёмка по трём критериям пройдена, симуляция red team 54 из 54 — помечена как симуляция, не продакшн-прогон. Открыто по собственному признанию системы: живой прогон против настоящей модели.</p>
+      <p>Правило, которое нельзя нарушать: литературный материал входит только сжатым ядром, никогда целиком — 13 законов разрешены в промпт, 10 категорий запрещены к полной загрузке. Литературная сила текста не может отменить эпистемическую проверку под ним.</p>
+      <div class="figs"><span><b>571 / 571</b> тестов</span><span>112+ капсул, 6 паков</span><span>22 355 строк</span></div>
+    </div>
+  </section>
+
+  <section class="rv">
+    <div class="tag"><span class="n">09</span> Состояние</div>
+    <h2>Измерено сегодня, не по памяти</h2>
+    <div class="tw">
+      <table>
+        <caption>Полный прогон · 19 августа 2026</caption>
+        <thead><tr><th>Область</th><th class="num">Прошло</th><th class="num">Пропущено</th><th class="num">Провалено</th></tr></thead>
+        <tbody>
+          <tr><td>Весь репозиторий</td><td class="num emph">3 946</td><td class="num">18</td><td class="num">0</td></tr>
+          <tr><td>HELIX (<code>helix_pipeline/</code>)</td><td class="num emph">1 958</td><td class="num">0</td><td class="num">0</td></tr>
+          <tr><td>MR_HELIX</td><td class="num emph">571</td><td class="num">0</td><td class="num">0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Честная оговорка: 12 тестов AK-MASTER падают внутри одной проверочной песочницы, где тестовый пакет конфликтует с системной библиотекой JWT — воспроизведено, диагностировано, подтверждено как не дефект кода. Указано здесь, а не опущено; тот же стандарт раскрытия применён ко всем остальным числам документа.</p>
+  </section>
+
+  <section class="rv">
+    <div class="tag"><span class="n">10</span> Просьба</div>
+    <h2>Что нужно, конкретно</h2>
+
+    <div class="box c">
+      <div class="box-l">Почему сейчас</div>
+      <p>Всё описанное построено на личные средства пенсионера и два небольших облачных гранта — <strong>300 долларов от Google&nbsp;Cloud и 200 от Azure</strong>. Ни один не бессрочен, и ни один не рассчитан на то, что стоит дорого: живые заземлённые вызовы модели в реальном расследовании, фоновые исследовательские задачи, полный регрессионный прогон по трём продуктам на каждое изменение.</p>
+    </div>
+
+    <ul class="ask">
+      <li><span class="k">Вычисления</span><span>Продлённый или расширенный кредит Google&nbsp;Cloud на Gemini&nbsp;API — единственного разрешённого системе провайдера — чтобы расследования шли на глубине, которую требует спецификация, а не в урезанной демо-версии.</span></li>
+      <li><span class="k">Хостинг</span><span>Устойчивый инфраструктурный кредит, чтобы живое развёртывание оставалось доступным между сессиями, а не восстанавливалось каждый раз из холодного состояния.</span></li>
+      <li><span class="k">Оценка</span><span>Технический разбор от людей, которые строят сами модели. В документе показаны исходники, формулы и три собственных найденных дефекта именно для того, чтобы такой разбор был возможен без предварительных условий.</span></li>
+      <li><span class="k">Программы</span><span>Путь в стартап-программу, программу исследовательских кредитов или грант, которому подходит этот профиль: один разработчик, на свои средства, пенсионный возраст, инвалидность, строится инфраструктура, а не продукт на продажу.</span></li>
+    </ul>
+  </section>
+
+  <section class="rv">
+    <div class="tag"><span class="n">11</span> Верификация</div>
+    <h2>Ничего из этого не просят принять на веру</h2>
+    <p>Каждое утверждение выше проверяемо в течение часа при доступе к репозиторию: системный промпт — в файле, названном в разделе&nbsp;01; формула CIRI — в файле из раздела&nbsp;02; матрица источник→патч→правило — в приложении&nbsp;А спецификации ядра; все три найденных дефекта — в докстрингах модулей, где они были найдены, с датами и полным разбором; коммиты аудита названы хешами.</p>
+    <p>Кодовая база закрытая, не публичная — осознанный выбор, пока это неоконченная работа одного человека, а не попытка избежать проверки. Полный доступ на чтение, живая демонстрация или сопровождаемый прогон тестов — по запросу любому, кто оценивает это для облачного кредита, гранта или партнёрства.</p>
+    <div class="pull">Систему, чей единственный смысл — не давать выдавать убедительность за доказательство, было бы странно представлять письмом, состоящим из одной убедительности.</div>
+  </section>
+
+  <section class="rv">
+    <div class="tag"><span class="n">12</span> Участие</div>
+    <h2>Войти в это можно не только деньгами</h2>
+    <p>Кредиты и гранты — не единственная форма. Я открыт к партнёрству, к совместной разработке, к тому, чтобы кто-то взял направление и вёл его, и к техническому разбору без всяких денег. Условия обсуждаемы почти любые: меня интересует не контроль, а то, чтобы система продолжала жить и развиваться — в том числе руками тех, кто сделает это лучше меня.</p>
+    <p>Юридически я к этому готов: зарегистрированное ИП в Польше (jednoosobowa działalność gospodarcza) позволяет получать гранты, выставлять счета и подписывать договоры, включая лицензионные, — сразу и законно.</p>
+    <div class="box a">
+      <div class="box-l">И то, что для меня важнее условий</div>
+      <p>Я работаю один. Сегодня, если я остановлюсь, всё это исчезает вместе с закрытым репозиторием. Поэтому в любом соглашении я хочу видеть записанным, что происходит с кодом и спецификациями, если я не смогу продолжать: депонирование, названный преемник, открытие лицензии по условию — механизм обсуждаем, наличие механизма нет. Система, которая работает без меня, — это успех, а не поражение.</p>
+    </div>
+    <p>Подробный разбор форм участия, того, что я даю со своей стороны, и единственного пункта, который не обсуждается, — в отдельном документе <code>PARTNERSHIP_RU.md</code> в открытом репозитории.</p>
+  </section>
+
+  <div class="signoff">
+    <div class="nm">Вашкевич Денис Георгиевич · Dzianis Vashkevich</div>
+    <div class="ln">ul. Armii Poznań 39, 62-030 Luboń, Polska</div>
+    <div class="ln">dendenden043@gmail.com · +48 571 296 605</div>
+    <div class="ln">Репозиторий открывается для технической проверки по запросу.</div>
+  </div>
+
+  <div class="foot">Досье HELIX · подготовлено 19 августа 2026 · все цифры, формулы и фрагменты кода получены прогоном по живому репозиторию в указанную дату</div>
+
+</div>
