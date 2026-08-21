@@ -62,7 +62,7 @@ not carried forward from an older file.
 
 ```
 Python                 138,225 lines across 692 files
-Specifications          51,081 lines
+Specifications          82,801 lines
 Tests                    3,951 passing, 18 skipped, 0 failing
 HELIX engine            19,003 lines across 71 modules
 Engine files audited        70 of 70, line by line

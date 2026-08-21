@@ -20,7 +20,7 @@ The state of it, plainly:
 
 - **It runs.** This is not a specification or a prototype — it is a deployed
   site you can log into and exercise. Three products on one engine.
-- **It is verified.** 3,946 tests; all 70 engine files read line by line
+- **It is verified.** 6,504 tests; all 70 engine files read line by line
   against written specification; 14 discrepancies found and fixed.
 - **It is one person.** No team, no investor, no manager. That is both the
   central weakness and the reason this document exists.

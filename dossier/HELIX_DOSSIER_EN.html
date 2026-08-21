@@ -265,10 +265,10 @@
     <p class="sub">A machine that will not let a language model <em>assign</em> a number — and that has caught its own authors doing it.</p>
 
     <div class="counters">
-      <div class="ct"><span class="v">137,064</span><span class="k">lines of Python</span></div>
-      <div class="ct"><span class="v">51,081</span><span class="k">lines of specification</span></div>
-      <div class="ct"><span class="v">3,946</span><span class="k">tests, zero failing</span></div>
-      <div class="ct"><span class="v">70/70</span><span class="k">files verified line by line</span></div>
+      <div class="ct"><span class="v">152,080</span><span class="k">lines of Python</span></div>
+      <div class="ct"><span class="v">82,801</span><span class="k">lines of specification</span></div>
+      <div class="ct"><span class="v">6,504</span><span class="k">tests, zero failing</span></div>
+      <div class="ct"><span class="v">922 / 0</span><span class="k">spec states / unreachable</span></div>
       <div class="ct"><span class="v">14</span><span class="k">discrepancies found &amp; fixed</span></div>
     </div>
 
@@ -563,14 +563,14 @@
       <div class="st2">literary engine · canon 6.7 + active extension 6.8</div>
       <p>The oldest and largest product — the one on which the discipline HELIX inherited was worked out. More than 30 named protocols check not prose style but <strong>narrative integrity</strong>: whether a character pays a real cost for a benefit, what kind of evidence backs a claim made inside the fiction, detectors for manipulative patterns (antagonist logic, satire, semantic desync), 37 syntactic modes, and a conflict-resolution system between protocols — Threat Gate, Tribunal Protocol, FRCP.</p>
       <p>The same "the world wins" principle: where an objective fact of the world conflicts with a character's subjective perception, resolution always favours the world; a hypothesis requiring new unjustified entities is flagged as an Occam's-razor violation.</p>
-      <div class="figs"><span><b>2,817</b> tests</span><span>132 files</span><span>160 / 173 site routes</span></div>
+      <div class="figs"><span><b>4,360</b> tests</span><span>134 engine modules</span><span>170 / 189 site routes</span></div>
     </div>
 
     <div class="prod">
       <h3>HELIX</h3>
       <div class="st2">epistemic verification engine · subject of this dossier</div>
       <p>GOVERNANCE, INTELLIGENCE, TRACE over the GI v6.2 core. The only one of the three to have completed a full line-by-line audit of every file, with a closing report for each section.</p>
-      <div class="figs"><span><b>1,958</b> tests</span><span>70 files, 100% verified</span><span>19,003 lines</span></div>
+      <div class="figs"><span><b>2,144</b> tests</span><span>922 states declared, 0 unreachable</span><span>19,003 lines</span></div>
     </div>
 
     <div class="prod">
@@ -579,7 +579,7 @@
       <p>A fusion of the epistemic core with the literary voice into one agent carrying three vectors of judgment. That second half of the status line is not a hedge added for this dossier — it is the system's own standing description of itself, repeated here unchanged.</p>
       <p>Built and confirmed: every pack wired into the orchestrator's run loop, 19 archival documents extracted and cross-checked against code, formal acceptance passed on three criteria, red-team simulation 54 of 54 — labelled a simulation, not a production run. Open by the system's own account: a live run against a real model.</p>
       <p>The rule that cannot be broken: literary material enters only as a compressed core, never whole — 13 laws permitted in the prompt, 10 categories forbidden from loading in full. A text's literary force may not override the epistemic check beneath it.</p>
-      <div class="figs"><span><b>571 / 571</b> tests</span><span>112+ capsules, 6 packs</span><span>22,355 lines</span></div>
+      <div class="figs"><span><b>99 / 99</b> capsules ENFORCED</span><span>583 states declared, 0 unreachable</span><span>22,355 lines</span></div>
     </div>
   </section>
 
@@ -588,16 +588,17 @@
     <h2>Measured today, not recalled</h2>
     <div class="tw">
       <table>
-        <caption>Full run · 19 August 2026</caption>
+        <caption>Full run · 21 August 2026</caption>
         <thead><tr><th>Scope</th><th class="num">Passed</th><th class="num">Skipped</th><th class="num">Failed</th></tr></thead>
         <tbody>
-          <tr><td>Whole repository</td><td class="num emph">3,946</td><td class="num">18</td><td class="num">0</td></tr>
-          <tr><td>HELIX (<code>helix_pipeline/</code>)</td><td class="num emph">1,958</td><td class="num">0</td><td class="num">0</td></tr>
-          <tr><td>MR_HELIX</td><td class="num emph">571</td><td class="num">0</td><td class="num">0</td></tr>
+          <tr><td>Root suite (AK-MASTER + Mr. Helix)</td><td class="num emph">4,360</td><td class="num">18</td><td class="num">0</td></tr>
+          <tr><td>HELIX (<code>helix_pipeline/</code>)</td><td class="num emph">2,144</td><td class="num">0</td><td class="num">0</td></tr>
+          <tr><td><b>Total</b></td><td class="num emph"><b>6,504</b></td><td class="num">18</td><td class="num">0</td></tr>
         </tbody>
       </table>
     </div>
-    <p>One honest caveat: 12 AK-MASTER tests fail inside a single verification sandbox where a test package conflicts with the system JWT library — reproduced, diagnosed, confirmed not to be a code defect. Stated here rather than dropped; the same disclosure standard applies to every other number in this document.</p>
+    <p>There are <b>two runs, and one is not enough</b>: the root suite deliberately does not collect <code>helix_pipeline</code> — it carries its own packages under the same names, which would shadow the root ones. Anyone running only the first command undercounts by a third. Mr. Helix tests run inside the root suite and are not broken out separately.</p>
+    <p>The previous edition's caveat — "12 AK-MASTER tests fail in a verification sandbox where a test package conflicts with the system JWT library" — is withdrawn: the 21 August run has no failures at all. That edition's own diagnosis ("not a code defect") was confirmed by the failures disappearing.</p>
   </section>
 
   <section class="rv">

@@ -16,7 +16,7 @@ another. If you are a recipient and you found this file, that is the point.
 
 ## 1 · Google Cloud — compute credits
 
-> **Subject:** Deterministic AI verification engine, 3,946 tests — request for extended Gemini credit
+> **Subject:** Deterministic AI verification engine, 6,504 tests — request for extended Gemini credit
 
 Hello,
 
@@ -32,10 +32,14 @@ number raises an exception before that number can reach a user.
 It calls exactly one model provider: **Gemini**. That is a fixed architectural
 decision recorded as irreversible, not a default I might drift away from.
 
-Current state, measured against the repository on 19 August 2026:
+Current state, measured against the repository on 21 August 2026:
 
-- 137,064 lines of Python; 3,946 tests passing, none failing
-- All 70 engine files verified line by line against written specification
+- 152,080 lines of Python across 738 files; 6,504 tests passing, none failing
+  (4,360 in the root suite, 2,144 in the HELIX suite — they run separately by
+  design)
+- All 70 files of `helix_pipeline/engine/` verified line by line against written
+  specification (audit of 19.08; the directory holds 78 files today, the eight
+  newer ones are outside that pass)
 - 14 discrepancies between specification and code found and fixed, with tests
 - Protocols compiled from published research: Popper's demarcation criterion
   runs as an executable test; the Loftus weapon-focus finding is a 0.30
@@ -81,8 +85,8 @@ persuasiveness substituting for evidence. The architecture's founding rule is
 that the model may extract semantics only — all arithmetic and every verdict
 runs in auditable Python.
 
-Measured on 19 August 2026: 137,064 lines of Python, 3,946 tests passing, all
-70 engine files verified line by line against written specification, 14
+Measured on 21 August 2026: 152,080 lines of Python, 6,504 tests passing, all
+70 engine files verified line by line against written specification (audit of 19.08), 14
 specification-versus-code discrepancies found and fixed with tests.
 
 In fairness, so you can weigh this accurately: the model calls themselves go to
@@ -162,7 +166,7 @@ Luboń, Poland
 
 ## 4 · Grant programs and investors — general
 
-> **Subject:** AI verification infrastructure, built solo — 3,946 tests, full audit record
+> **Subject:** AI verification infrastructure, built solo — 6,504 tests, full audit record
 
 Hello,
 
@@ -182,13 +186,13 @@ explicit line of written specification, it is treated as a bug — a rule the
 project has enforced against itself, removing four plausible-looking confidence
 thresholds that turned out to exist nowhere in the specification.
 
-State as of 19 August 2026, measured rather than recalled:
+State as of 21 August 2026, measured rather than recalled:
 
 | | |
 |---|---|
-| Python | 137,064 lines, 687 files |
-| Specifications | 51,081 lines |
-| Tests | 3,946 passing, 0 failing |
+| Python | 152,080 lines, 738 files |
+| Specifications | 51,348 lines HELIX + 31,453 Mr. Helix |
+| Tests | 6,504 passing, 0 failing (two runs: 4,360 + 2,144) |
 | Engine files audited line by line | 70 of 70 |
 | Discrepancies found and fixed | 14, each with tests |
 
