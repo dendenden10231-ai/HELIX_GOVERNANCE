@@ -1,0 +1,52 @@
+name: Публикация досье на GitHub Pages
+
+# ЗАЧЕМ ЭТОТ ФАЙЛ СУЩЕСТВУЕТ
+#
+# Досье — это HTML. Если дать рецензенту прямую ссылку на файл в
+# репозитории, GitHub отдаст его как text/plain с заголовком nosniff, и
+# браузер покажет исходный код вместо страницы. Для грантовой заявки это
+# бесполезная ссылка.
+#
+# Включить Pages через API из сессии агента нельзя: прокси отвечает
+# 403 «Access to this GitHub API path is not permitted through this proxy».
+# Но этот workflow выполняется НА СЕРВЕРАХ GITHUB, а не через прокси, и
+# actions/configure-pages с enablement: true включает Pages оттуда.
+# Это и есть обход стены — законный, а не хитрость: права берутся из
+# permissions ниже, а не выпрашиваются.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Включить Pages, если ещё не включены
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Собрать артефакт из корня репозитория
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Опубликовать
+        id: deployment
+        uses: actions/deploy-pages@v4

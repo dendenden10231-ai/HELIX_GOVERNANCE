@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HELIX — Public Dossier</title>
+<meta name="description" content="Deterministic verification of AI-generated output. Public dossier, audit record, and reader's guide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --bg:         #eceef0;
+    --paper:      #ffffff;
+    --paper-sunk: #f3f5f6;
+    --ink:        #10171c;
+    --ink-mid:    #4d5a63;
+    --ink-low:    #77848c;
+    --accent:     #0d6068;
+    --accent-lo:  #d6e5e5;
+    --amber:      #9a6510;
+    --rule:       #ccd2d6;
+    --f-disp: 'Spectral', 'PT Serif', Georgia, serif;
+    --f-body: 'Source Serif 4', 'PT Serif', Georgia, serif;
+    --f-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+  }
+  :root:not([data-theme="light"]) {
+    --bg:         #0c1114;
+    --paper:      #131a1f;
+    --paper-sunk: #171f24;
+    --ink:        #e4eaed;
+    --ink-mid:    #a3b0b8;
+    --ink-low:    #7d8b93;
+    --accent:     #63c2b4;
+    --accent-lo:  #17302f;
+    --amber:      #d9a05b;
+    --rule:       #26313a;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg:#eceef0; --paper:#ffffff; --paper-sunk:#f3f5f6;
+      --ink:#10171c; --ink-mid:#4d5a63; --ink-low:#77848c;
+      --accent:#0d6068; --accent-lo:#d6e5e5; --amber:#9a6510; --rule:#ccd2d6;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: var(--f-body); font-size: 17px; line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 46rem; margin: 0 auto; padding: 4rem 1.5rem 5rem; }
+  .eyebrow {
+    font-family: var(--f-mono); font-size: .72rem; letter-spacing: .16em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 1.1rem;
+  }
+  h1 {
+    font-family: var(--f-disp); font-weight: 600; font-size: clamp(2.1rem, 6vw, 3.1rem);
+    line-height: 1.12; margin: 0 0 1.1rem; text-wrap: balance; letter-spacing: -.01em;
+  }
+  .lede { font-size: 1.14rem; color: var(--ink-mid); margin: 0 0 .9rem; }
+  .lede strong { color: var(--ink); font-weight: 600; }
+  h2 {
+    font-family: var(--f-disp); font-weight: 600; font-size: 1.32rem;
+    margin: 3.2rem 0 1.1rem; padding-bottom: .5rem; border-bottom: 1px solid var(--rule);
+  }
+  a { color: var(--accent); }
+  .cards { display: grid; gap: .9rem; margin: 1.6rem 0 0; }
+  .card {
+    display: block; background: var(--paper); border: 1px solid var(--rule);
+    border-radius: 3px; padding: 1.15rem 1.3rem; text-decoration: none; color: inherit;
+    transition: border-color .15s, transform .15s;
+  }
+  .card:hover, .card:focus-visible { border-color: var(--accent); transform: translateY(-1px); }
+  .card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .card h3 {
+    font-family: var(--f-disp); font-size: 1.08rem; font-weight: 600;
+    margin: 0 0 .35rem; color: var(--accent);
+  }
+  .card p { margin: 0; font-size: .95rem; color: var(--ink-mid); line-height: 1.5; }
+  .card.primary { border-left: 3px solid var(--accent); background: var(--paper); }
+  .figs {
+    display: flex; flex-wrap: wrap; gap: 0 2.2rem; margin: 2rem 0 0;
+    padding: 1.2rem 1.3rem; background: var(--paper-sunk);
+    border: 1px solid var(--rule); border-radius: 3px;
+  }
+  .fig { padding: .45rem 0; }
+  .fig b {
+    display: block; font-family: var(--f-mono); font-size: 1.22rem; font-weight: 500;
+    font-variant-numeric: tabular-nums; color: var(--ink);
+  }
+  .fig span { font-size: .78rem; color: var(--ink-low); }
+  .note {
+    margin: 1.5rem 0 0; padding: 1rem 1.2rem; border-left: 3px solid var(--amber);
+    background: var(--paper-sunk); font-size: .95rem; color: var(--ink-mid);
+  }
+  .note b { color: var(--ink); }
+  code {
+    font-family: var(--f-mono); font-size: .86em;
+    background: var(--paper-sunk); padding: .1em .35em; border-radius: 2px;
+  }
+  footer {
+    margin-top: 3.5rem; padding-top: 1.3rem; border-top: 1px solid var(--rule);
+    font-size: .88rem; color: var(--ink-low);
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="eyebrow">Public dossier &amp; audit record</div>
+  <h1>Deterministic verification of AI-generated output</h1>
+
+  <p class="lede">The language model is permitted to <strong>read and to name</strong>.
+  It is forbidden to compute and to decide. Every number, threshold, and verdict
+  is produced by deterministic Python, verified line by line against a written
+  specification.</p>
+
+  <p class="lede">Built and maintained by one person. This page is the public
+  window onto that work.</p>
+
+  <div class="figs">
+    <div class="fig"><b>6,504</b><span>tests, zero failing</span></div>
+    <div class="fig"><b>152,080</b><span>lines of Python</span></div>
+    <div class="fig"><b>82,801</b><span>lines of specification</span></div>
+    <div class="fig"><b>922 / 0</b><span>spec states / unreachable</span></div>
+  </div>
+
+  <h2>Start here</h2>
+
+  <div class="cards">
+    <a class="card primary" href="dossier/HELIX_DOSSIER_EN.html">
+      <h3>The dossier — English</h3>
+      <p>The main document. Quotes the running system directly: the classifier
+      prompt that forbids the model from returning numbers, the risk formula with
+      its weights, the scientific findings compiled into executable rules, and
+      three documented cases where the audit found a defect inside the system
+      itself.</p>
+    </a>
+    <a class="card primary" href="dossier/HELIX_DOSSIER_RU.html">
+      <h3>Досье — русский</h3>
+      <p>Тот же документ на русском языке.</p>
+    </a>
+    <a class="card" href="guide/SPECIFICATION_GUIDE_EN.md">
+      <h3>Reader's guide to the specifications</h3>
+      <p>The specifications are written in Russian. This maps what lives where,
+      names every protocol in English, and explains the vocabulary needed to read
+      them.</p>
+    </a>
+    <a class="card" href="PARTNERSHIP_EN.md">
+      <h3>Taking part</h3>
+      <p>How to fund, join, partner, or simply review this — what is open to
+      negotiation, what is not, and what happens to the work if the author stops.
+      <a href="PARTNERSHIP_RU.md">Русская версия</a>.</p>
+    </a>
+    <a class="card" href="letters/LETTERS_EN.md">
+      <h3>Letters, published as sent</h3>
+      <p>The letters sent to cloud programs, model developers, and grant
+      programs. Published because the same case is made to everyone, in the same
+      words, with the same numbers. <a href="letters/LETTERS_RU.md">Русская версия</a>.</p>
+    </a>
+    <a class="card" href="https://github.com/dendenden10231-ai/HELIX_GOVERNANCE/tree/main/audit">
+      <h3>The audit record — six reports</h3>
+      <p>In August 2026 the engine was read line by line against the exact text of
+      its governing specifications — not a summary, and not a prior comment
+      claiming everything was fine. Fourteen discrepancies were found and fixed
+      the same day, each with tests.</p>
+    </a>
+  </div>
+
+  <h2>What is not proven here</h2>
+
+  <div class="note">
+    <p style="margin:0 0 .7rem"><b>There is no independent verification.</b> Every
+    piece of evidence originates in one repository belonging to one person. No
+    outside party has confirmed anything. A reviewer should discount that, and is
+    right to.</p>
+    <p style="margin:0">This is not a concession extracted under pressure — the
+    verdict was reached by <b>the product's own audit</b>, run over the material
+    of this very outreach campaign. Hence the order of asking: the first request
+    is not for money, but for an outsider to run the tests and say what they see.</p>
+  </div>
+
+  <h2>The system is live</h2>
+
+  <p>This is a deployed site, not a specification:
+  <a href="https://web-production-b540f.up.railway.app">web-production-b540f.up.railway.app</a>
+  — three separate products on one deployment, live model calls, real grounded
+  investigations. Sign-in via Google. A guided walkthrough is available on request.</p>
+
+  <p>The source code and the specifications themselves remain private.
+  <b>Read access is granted to any reviewer without conditions</b> — hesitation
+  there costs more than any risk. Every figure on this page is reproducible
+  within an hour given that access.</p>
+
+  <footer>
+    Dzianis Vashkevich · <a href="mailto:dendenden043@gmail.com">dendenden043@gmail.com</a> · Luboń, Poland<br>
+    Figures measured 21 August 2026. Source of this page:
+    <a href="https://github.com/dendenden10231-ai/HELIX_GOVERNANCE">github.com/dendenden10231-ai/HELIX_GOVERNANCE</a>
+  </footer>
+
+</div>
+</body>
+</html>
