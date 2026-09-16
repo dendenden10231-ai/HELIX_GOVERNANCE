@@ -1,8 +1,8 @@
-<title>HELIX Dossier</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<style>
+&lt;title&gt;HELIX Dossier&lt;/title&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"&gt;
+&lt;style&gt;
   :root {
     --bg:          #eceef0;
     --paper:       #ffffff;
@@ -255,396 +255,398 @@
     .sheet { padding: 0 16px 90px; }
     .spec-body { font-size: 11.5px; }
   }
-</style>
+&lt;/style&gt;
 
-<div class="sheet">
+&lt;div class="sheet"&gt;
 
-  <header class="cover rv">
-    <div class="eyebrow">Technical Dossier · Epistemic Verification Engine</div>
-    <h1>HELIX</h1>
-    <p class="sub">A machine that will not let a language model <em>assign</em> a number — and that has caught its own authors doing it.</p>
+  &lt;header class="cover rv"&gt;
+    &lt;div class="eyebrow"&gt;Technical Dossier · Epistemic Verification Engine&lt;/div&gt;
+    &lt;h1&gt;HELIX&lt;/h1&gt;
+    &lt;p class="sub"&gt;A machine that will not let a language model &lt;em&gt;assign&lt;/em&gt; a number — and that has caught its own authors doing it.&lt;/p&gt;
 
-    <div class="counters">
-      <div class="ct"><span class="v">152,080</span><span class="k">lines of Python</span></div>
-      <div class="ct"><span class="v">82,801</span><span class="k">lines of specification</span></div>
-      <div class="ct"><span class="v">6,504</span><span class="k">tests, zero failing</span></div>
-      <div class="ct"><span class="v">922 / 0</span><span class="k">spec states / unreachable</span></div>
-      <div class="ct"><span class="v">14</span><span class="k">discrepancies found &amp; fixed</span></div>
-    </div>
+    &lt;div class="counters"&gt;
+      &lt;div class="ct"&gt;&lt;span class="v"&gt;152,080&lt;/span&gt;&lt;span class="k"&gt;lines of Python&lt;/span&gt;&lt;/div&gt;
+      &lt;div class="ct"&gt;&lt;span class="v"&gt;82,801&lt;/span&gt;&lt;span class="k"&gt;lines of specification&lt;/span&gt;&lt;/div&gt;
+      &lt;div class="ct"&gt;&lt;span class="v"&gt;8,038&lt;/span&gt;&lt;span class="k"&gt;tests, zero failing&lt;/span&gt;&lt;/div&gt;
+      &lt;div class="ct"&gt;&lt;span class="v"&gt;922 / 0&lt;/span&gt;&lt;span class="k"&gt;spec states / unreachable&lt;/span&gt;&lt;/div&gt;
+      &lt;div class="ct"&gt;&lt;span class="v"&gt;14&lt;/span&gt;&lt;span class="k"&gt;discrepancies found &amp;amp; fixed&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
 
-    <dl class="metabar">
-      <div><dt>Built by</dt><dd>one person, retired</dd></div>
-      <div><dt>Funding</dt><dd>personal + $500 in credits</dd></div>
-      <div><dt>Dated</dt><dd>19 August 2026</dd></div>
-      <div><dt>Requesting</dt><dd>compute &amp; cloud credits</dd></div>
-    </dl>
-  </header>
+    &lt;dl class="metabar"&gt;
+      &lt;div&gt;&lt;dt&gt;Built by&lt;/dt&gt;&lt;dd&gt;one person, retired&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Funding&lt;/dt&gt;&lt;dd&gt;personal + $500 in credits&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Dated&lt;/dt&gt;&lt;dd&gt;19 August 2026&lt;/dd&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;dt&gt;Requesting&lt;/dt&gt;&lt;dd&gt;compute &amp;amp; cloud credits&lt;/dd&gt;&lt;/div&gt;
+    &lt;/dl&gt;
+  &lt;/header&gt;
 
-  <section class="rv">
-    <div class="tag"><span class="n">01</span> The thesis</div>
-    <h2>One rule, from which the whole system is derived</h2>
-    <p class="lede">The language model is permitted to <strong>read and to name</strong>. It is forbidden to <strong>compute and to decide</strong>. Every number, every threshold, every verdict is produced by deterministic Python whose source is open to line-by-line inspection.</p>
-    <p>This is not an aspiration written in documentation. It is enforced inside the system prompt sent to the model on every single call. Here it is verbatim, from the running file:</p>
+  &lt;section class="rv"&gt;
+    &lt;div class="tag"&gt;&lt;span class="n"&gt;01&lt;/span&gt; The thesis&lt;/div&gt;
+    &lt;h2&gt;One rule, from which the whole system is derived&lt;/h2&gt;
+    &lt;p class="lede"&gt;The language model is permitted to &lt;strong&gt;read and to name&lt;/strong&gt;. It is forbidden to &lt;strong&gt;compute and to decide&lt;/strong&gt;. Every number, every threshold, every verdict is produced by deterministic Python whose source is open to line-by-line inspection.&lt;/p&gt;
+    &lt;p&gt;This is not an aspiration written in documentation. It is enforced inside the system prompt sent to the model on every single call. Here it is verbatim, from the running file:&lt;/p&gt;
 
-    <div class="spec">
-      <div class="spec-head"><b>helix_pipeline/engine/governance_classifier.py</b><span class="r">system prompt · verbatim from §16 of the specification</span></div>
-      <div class="spec-body"><span class="c">1. HALLUCINATIONS: identify signals of 7 types (TYPE-1..TYPE-7).</span>
-   Return <span class="k">ONLY text labels and excerpts — NOT numbers.</span>
+    &lt;div class="spec"&gt;
+      &lt;div class="spec-head"&gt;&lt;b&gt;helix_pipeline/engine/governance_classifier.py&lt;/b&gt;&lt;span class="r"&gt;system prompt · verbatim from §16 of the specification&lt;/span&gt;&lt;/div&gt;
+      &lt;div class="spec-body"&gt;&lt;span class="c"&gt;1. HALLUCINATIONS: identify signals of 7 types (TYPE-1..TYPE-7).&lt;/span&gt;
+   Return &lt;span class="k"&gt;ONLY text labels and excerpts — NOT numbers.&lt;/span&gt;
    The mathematics (severity weights, confidence) is computed
    by the Python engine.
 
-<span class="c">2. NGI DIMENSIONS: score 4 dimensions on a 0-3 scale.</span>
-   <span class="k">These are the ONLY numbers you return.</span>
+&lt;span class="c"&gt;2. NGI DIMENSIONS: score 4 dimensions on a 0-3 scale.&lt;/span&gt;
+   &lt;span class="k"&gt;These are the ONLY numbers you return.&lt;/span&gt;
    Justify in prose, without formulas.
 
-<span class="w">IMPORTANT:</span>
+&lt;span class="w"&gt;IMPORTANT:&lt;/span&gt;
 - Do not include confidence numbers, scores, weights — that is the engine
 - Do not include governance_decision — that is the engine
-- severity_signal is your semantic reading only, <span class="k">not a final weight</span></div>
-      <div class="spec-cap"><b>What matters here.</b> The model returns exactly four numbers per pass — four 0–3 ratings on a narrative-gravity scale. Everything else, including the final verdict of <em>pass / escalate to a human / block</em>, it is structurally unable to utter. The prompt is not hand-edited: it is kept in sync with §16 of the specification, and any divergence is treated as a defect.</div>
-    </div>
+- severity_signal is your semantic reading only, &lt;span class="k"&gt;not a final weight&lt;/span&gt;&lt;/div&gt;
+      &lt;div class="spec-cap"&gt;&lt;b&gt;What matters here.&lt;/b&gt; The model returns exactly four numbers per pass — four 0–3 ratings on a narrative-gravity scale. Everything else, including the final verdict of &lt;em&gt;pass / escalate to a human / block&lt;/em&gt;, it is structurally unable to utter. The prompt is not hand-edited: it is kept in sync with §16 of the specification, and any divergence is treated as a defect.&lt;/div&gt;
+    &lt;/div&gt;
 
-    <div class="box t">
-      <div class="box-l">And the mirror rule</div>
-      <p>A missing provider key does not yield an empty result. It yields <code>CLASSIFIER-NOT-CONFIGURED</code> and an exception. An empty list of violations would mean "checked, nothing found" — a conclusion reached without checking. The system refuses to say it.</p>
-    </div>
-  </section>
+    &lt;div class="box t"&gt;
+      &lt;div class="box-l"&gt;And the mirror rule&lt;/div&gt;
+      &lt;p&gt;A missing provider key does not yield an empty result. It yields &lt;code&gt;CLASSIFIER-NOT-CONFIGURED&lt;/code&gt; and an exception. An empty list of violations would mean "checked, nothing found" — a conclusion reached without checking. The system refuses to say it.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
 
-  <section class="rv">
-    <div class="tag"><span class="n">01·5</span> The live system</div>
-    <h2>This is not a specification. It is a deployed site</h2>
-    <p class="lede">Everything described in this document is running right now and open to inspection. Not a prototype, not a recorded demo, not "launching soon" — a deployed system you can log into and exercise protocol by protocol.</p>
-    <div class="box t">
-      <div class="box-l">Address</div>
-      <p style="font-family:var(--f-mono);font-size:15px"><a href="https://web-production-b540f.up.railway.app">web-production-b540f.up.railway.app</a></p>
-      <p>Three products on one engine, live model calls, real open-source investigations with grounded search. Sign-in via Google. If you are evaluating this for credit, a grant, or partnership — write, and I will walk you through the system personally, including the parts I consider weak.</p>
-    </div>
-    <p>The figures in this dossier do not describe an intention. They are measurements of a working thing.</p>
-  </section>
+  &lt;section class="rv"&gt;
+    &lt;div class="tag"&gt;&lt;span class="n"&gt;01·5&lt;/span&gt; The live system&lt;/div&gt;
+    &lt;h2&gt;This is not a specification. It is a deployed site&lt;/h2&gt;
+    &lt;p class="lede"&gt;Everything described in this document is running right now and open to inspection. Not a prototype, not a recorded demo, not "launching soon" — a deployed system you can log into and exercise protocol by protocol.&lt;/p&gt;
+    &lt;div class="box t"&gt;
+      &lt;div class="box-l"&gt;Address&lt;/div&gt;
+      &lt;p style="font-family:var(--f-mono);font-size:15px"&gt;&lt;a href="https://web-production-b540f.up.railway.app"&gt;web-production-b540f.up.railway.app&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;Three products on one engine, live model calls, real open-source investigations with grounded search. Sign-in via Google. If you are evaluating this for credit, a grant, or partnership — write, and I will walk you through the system personally, including the parts I consider weak.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;The figures in this dossier do not describe an intention. They are measurements of a working thing.&lt;/p&gt;
+  &lt;/section&gt;
 
-  <section class="rv">
-    <div class="tag"><span class="n">02</span> The mathematics</div>
-    <h2>If the model doesn't assign the numbers, the formula must be shown</h2>
-    <p>Here is the risk core in full, exactly as it sits in the code:</p>
+  &lt;section class="rv"&gt;
+    &lt;div class="tag"&gt;&lt;span class="n"&gt;02&lt;/span&gt; The mathematics&lt;/div&gt;
+    &lt;h2&gt;If the model doesn't assign the numbers, the formula must be shown&lt;/h2&gt;
+    &lt;p&gt;Here is the risk core in full, exactly as it sits in the code:&lt;/p&gt;
 
-    <div class="spec">
-      <div class="spec-head"><b>helix_pipeline/engine/governance_math.py</b><span class="r">CIRI — Composite Integrity Risk Index [0–100]</span></div>
-      <div class="spec-body"><span class="c">HALLUCINATION_WEIGHTS = {</span>
+    &lt;div class="spec"&gt;
+      &lt;div class="spec-head"&gt;&lt;b&gt;helix_pipeline/engine/governance_math.py&lt;/b&gt;&lt;span class="r"&gt;CIRI — Composite Integrity Risk Index [0–100]&lt;/span&gt;&lt;/div&gt;
+      &lt;div class="spec-body"&gt;&lt;span class="c"&gt;HALLUCINATION_WEIGHTS = {&lt;/span&gt;
     "CRITICAL": 0.80,   "HIGH": 0.40,
     "MEDIUM":   0.15,   "LOW":  0.05,
-<span class="c">}</span>
+&lt;span class="c"&gt;}&lt;/span&gt;
 
-<span class="c">Formula:</span>
+&lt;span class="c"&gt;Formula:&lt;/span&gt;
   base_risk          = (1 − confidence) × 50
   ngi_risk           = ngi.total × (20 / 12)
   hallucination_risk = min(critical×10 + high×5, 20)
   rpl_risk           = (1 − rpl_factor) × 10
-  <span class="k">CIRI = min(100, int(sum))</span>
+  &lt;span class="k"&gt;CIRI = min(100, int(sum))&lt;/span&gt;
 
-<span class="c">RPL_BLOCK_THRESHOLD = 0.70</span>   <span class="c"># below → block ECT-4</span>
-<span class="c">CIRI_WARN_THRESHOLD = 70</span>     <span class="c"># above → WARN</span></div>
-      <div class="spec-cap"><b>Auditability as a structural property.</b> Any number the system outputs decomposes back into its inputs. Not "the model rated the risk 73" — but "73 = 21 base risk + 15 narrative gravity + 20 hallucination + 17 resource pressure", each term traceable to a specific line of specification.</div>
-    </div>
+&lt;span class="c"&gt;RPL_BLOCK_THRESHOLD = 0.70&lt;/span&gt;   &lt;span class="c"&gt;# below → block ECT-4&lt;/span&gt;
+&lt;span class="c"&gt;CIRI_WARN_THRESHOLD = 70&lt;/span&gt;     &lt;span class="c"&gt;# above → WARN&lt;/span&gt;&lt;/div&gt;
+      &lt;div class="spec-cap"&gt;&lt;b&gt;Auditability as a structural property.&lt;/b&gt; Any number the system outputs decomposes back into its inputs. Not "the model rated the risk 73" — but "73 = 21 base risk + 15 narrative gravity + 20 hallucination + 17 resource pressure", each term traceable to a specific line of specification.&lt;/div&gt;
+    &lt;/div&gt;
 
-    <p>Alongside it, the eight Article 9 requirements of the EU AI Act are wired in with weights as a separate compliance check: risk management 20, technical documentation 15, record-keeping 15, human oversight 15, data governance 10, transparency 10, accuracy and robustness 10, cybersecurity 5.</p>
-  </section>
+    &lt;p&gt;Alongside it, the eight Article 9 requirements of the EU AI Act are wired in with weights as a separate compliance check: risk management 20, technical documentation 15, record-keeping 15, human oversight 15, data governance 10, transparency 10, accuracy and robustness 10, cybersecurity 5.&lt;/p&gt;
+  &lt;/section&gt;
 
-  <section class="rv">
-    <div class="tag"><span class="n">03</span> The foundation</div>
-    <h2>Six scientific sources, compiled into executable rules</h2>
-    <p class="lede">This is not a system invented from common sense. Every core protocol traces to a specific published work in cognitive psychology, philosophy of science, or forensic science — and to the specific line of code that executes it.</p>
+  &lt;section class="rv"&gt;
+    &lt;div class="tag"&gt;&lt;span class="n"&gt;03&lt;/span&gt; The foundation&lt;/div&gt;
+    &lt;h2&gt;Six scientific sources, compiled into executable rules&lt;/h2&gt;
+    &lt;p class="lede"&gt;This is not a system invented from common sense. Every core protocol traces to a specific published work in cognitive psychology, philosophy of science, or forensic science — and to the specific line of code that executes it.&lt;/p&gt;
 
-    <div class="tw">
-      <table>
-        <caption>Integration matrix: source → cognitive defect → patch → rule → report marker</caption>
-        <thead><tr><th>Source</th><th>Defect</th><th>Patch</th><th>Rule in code</th><th>Marker</th></tr></thead>
-        <tbody>
-          <tr><td class="m">Kahneman<br>2011</td><td>WYSIATI, System&nbsp;2 depletion</td><td class="m">IFM-42<br>PPS-55</td><td>Overload blocks System&nbsp;1 — at 5+ triggers each is escalated one level</td><td class="mk">[SL-1]</td></tr>
-          <tr><td class="m">Kahneman<br>2011</td><td>Attribute substitution</td><td class="m">ACH block 5</td><td>Forced decomposition of the question</td><td class="mk">[SL-2 CHECK]</td></tr>
-          <tr><td class="m">Popper<br>1959</td><td>Conventionalist stratagems</td><td class="m">SSD-51<br>FRCP-34</td><td>Ad&nbsp;hoc ban: a hypothesis may not be rescued by an exception that lowers falsifiability</td><td class="mk">[AD HOC FLAG]</td></tr>
-          <tr><td class="m">Deffenbacher<br>&amp; Loftus 1982</td><td>Weapon focus</td><td class="m">PDP-X-41</td><td>Trust score for facial identification <b>× 0.30</b>, regardless of witness confidence</td><td class="mk">[SL-4]</td></tr>
-          <tr><td class="m">Deffenbacher<br>&amp; Loftus 1982</td><td>Photobiased lineup</td><td class="m">PDP-X-41</td><td>Photo shown before lineup → identification <b>voided</b>, not merely penalised</td><td class="mk">[SL-5]</td></tr>
-          <tr><td class="m">Loftus<br>&amp; Ketcham 1994</td><td>Suggestive memory implantation</td><td class="m">MDP-4</td><td>Trust ceiling forced to ECT-1</td><td class="mk">[SL-6]</td></tr>
-          <tr><td class="m">Cohen<br>1972</td><td>Moral panic</td><td class="m">MPF-52<br>SCoA-44</td><td>Five panic criteria + deviancy spiral as a filter</td><td class="mk">[SL-7]</td></tr>
-          <tr><td class="m">Dror<br>2006–2021</td><td>Contextual bias in expert judgment</td><td class="m">SDF-49</td><td>Evidence not passed blind → ECT&nbsp;× 0.70, bias cascade flagged</td><td class="mk">[SL-8]</td></tr>
-        </tbody>
-      </table>
-    </div>
+    &lt;div class="tw"&gt;
+      &lt;table&gt;
+        &lt;caption&gt;Integration matrix: source → cognitive defect → patch → rule → report marker&lt;/caption&gt;
+        &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Source&lt;/th&gt;&lt;th&gt;Defect&lt;/th&gt;&lt;th&gt;Patch&lt;/th&gt;&lt;th&gt;Rule in code&lt;/th&gt;&lt;th&gt;Marker&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;&lt;td class="m"&gt;Kahneman&lt;br&gt;2011&lt;/td&gt;&lt;td&gt;WYSIATI, System&amp;nbsp;2 depletion&lt;/td&gt;&lt;td class="m"&gt;IFM-42&lt;br&gt;PPS-55&lt;/td&gt;&lt;td&gt;Overload blocks System&amp;nbsp;1 — at 5+ triggers each is escalated one level&lt;/td&gt;&lt;td class="mk"&gt;[SL-1]&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td class="m"&gt;Kahneman&lt;br&gt;2011&lt;/td&gt;&lt;td&gt;Attribute substitution&lt;/td&gt;&lt;td class="m"&gt;ACH block 5&lt;/td&gt;&lt;td&gt;Forced decomposition of the question&lt;/td&gt;&lt;td class="mk"&gt;[SL-2 CHECK]&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td class="m"&gt;Popper&lt;br&gt;1959&lt;/td&gt;&lt;td&gt;Conventionalist stratagems&lt;/td&gt;&lt;td class="m"&gt;SSD-51&lt;br&gt;FRCP-34&lt;/td&gt;&lt;td&gt;Ad&amp;nbsp;hoc ban: a hypothesis may not be rescued by an exception that lowers falsifiability&lt;/td&gt;&lt;td class="mk"&gt;[AD HOC FLAG]&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td class="m"&gt;Deffenbacher&lt;br&gt;&amp;amp; Loftus 1982&lt;/td&gt;&lt;td&gt;Weapon focus&lt;/td&gt;&lt;td class="m"&gt;PDP-X-41&lt;/td&gt;&lt;td&gt;Trust score for facial identification &lt;b&gt;× 0.30&lt;/b&gt;, regardless of witness confidence&lt;/td&gt;&lt;td class="mk"&gt;[SL-4]&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td class="m"&gt;Deffenbacher&lt;br&gt;&amp;amp; Loftus 1982&lt;/td&gt;&lt;td&gt;Photobiased lineup&lt;/td&gt;&lt;td class="m"&gt;PDP-X-41&lt;/td&gt;&lt;td&gt;Photo shown before lineup → identification &lt;b&gt;voided&lt;/b&gt;, not merely penalised&lt;/td&gt;&lt;td class="mk"&gt;[SL-5]&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td class="m"&gt;Loftus&lt;br&gt;&amp;amp; Ketcham 1994&lt;/td&gt;&lt;td&gt;Suggestive memory implantation&lt;/td&gt;&lt;td class="m"&gt;MDP-4&lt;/td&gt;&lt;td&gt;Trust ceiling forced to ECT-1&lt;/td&gt;&lt;td class="mk"&gt;[SL-6]&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td class="m"&gt;Cohen&lt;br&gt;1972&lt;/td&gt;&lt;td&gt;Moral panic&lt;/td&gt;&lt;td class="m"&gt;MPF-52&lt;br&gt;SCoA-44&lt;/td&gt;&lt;td&gt;Five panic criteria + deviancy spiral as a filter&lt;/td&gt;&lt;td class="mk"&gt;[SL-7]&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td class="m"&gt;Dror&lt;br&gt;2006–2021&lt;/td&gt;&lt;td&gt;Contextual bias in expert judgment&lt;/td&gt;&lt;td class="m"&gt;SDF-49&lt;/td&gt;&lt;td&gt;Evidence not passed blind → ECT&amp;nbsp;× 0.70, bias cascade flagged&lt;/td&gt;&lt;td class="mk"&gt;[SL-8]&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
 
-    <p>Popper's demarcation criterion is not an epigraph here — it is an executable check. This is how it reads in the specification that produced the <code>ssd.py</code> module:</p>
+    &lt;p&gt;Popper's demarcation criterion is not an epigraph here — it is an executable check. This is how it reads in the specification that produced the &lt;code&gt;ssd.py&lt;/code&gt; module:&lt;/p&gt;
 
-    <div class="spec">
-      <div class="spec-head"><b>GI_v6_2_COMPLETE.md · Patch 51 (SSD)</b><span class="r">scientific basis, verbatim</span></div>
-      <div class="spec-body"><span class="c">SCIENTIFIC BASIS OF SSD (Popper, 1959):</span>
+    &lt;div class="spec"&gt;
+      &lt;div class="spec-head"&gt;&lt;b&gt;GI_v6_2_COMPLETE.md · Patch 51 (SSD)&lt;/b&gt;&lt;span class="r"&gt;scientific basis, verbatim&lt;/span&gt;&lt;/div&gt;
+      &lt;div class="spec-body"&gt;&lt;span class="c"&gt;SCIENTIFIC BASIS OF SSD (Popper, 1959):&lt;/span&gt;
   The SSD test is a direct application of Popper's demarcation
-  criterion. <span class="k">An unfalsifiable H1 is not a hypothesis.</span> It is a
+  criterion. &lt;span class="k"&gt;An unfalsifiable H1 is not a hypothesis.&lt;/span&gt; It is a
   metaphysical statement. It may be true, but it cannot be
   tested. In an investigation this means:
-  <span class="w">a conclusion resting on an unfalsifiable H1 = accusation without evidence.</span>
+  &lt;span class="w"&gt;a conclusion resting on an unfalsifiable H1 = accusation without evidence.&lt;/span&gt;
 
-<span class="c">RULE [Ban on ad hoc modification] (Popper, 1959):</span>
+&lt;span class="c"&gt;RULE [Ban on ad hoc modification] (Popper, 1959):&lt;/span&gt;
   It is forbidden to rescue H1 from an FRCP conflict by adding
   exceptions that reduce overall falsifiability.
-  Not permitted: "this is an exception because the subject is a special case."</div>
-      <div class="spec-cap"><b>Philosophy compiled into a function.</b> A hypothesis that no conceivable fact could refute is marked unusable, and any conclusion resting on it is capped below a given trust level. Not because that is more honest, but because the prohibition was formulated in 1959, has held up, and now executes automatically.</div>
-    </div>
-  </section>
+  Not permitted: "this is an exception because the subject is a special case."&lt;/div&gt;
+      &lt;div class="spec-cap"&gt;&lt;b&gt;Philosophy compiled into a function.&lt;/b&gt; A hypothesis that no conceivable fact could refute is marked unusable, and any conclusion resting on it is capped below a given trust level. Not because that is more honest, but because the prohibition was formulated in 1959, has held up, and now executes automatically.&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
 
-  <section class="rv">
-    <div class="tag"><span class="n">04</span> The math kernel</div>
-    <h2>Forty-four operators, held by ten laws</h2>
-    <p>Above the protocols sits a separate layer: a library of <strong>44 strictly formalised mathematical operators</strong> across domains — causality (do-operator, back-door adjustment, collider bias, counterfactual), probability (Bayesian update, beta distribution), graphs (centrality, clustering, modularity), information (transfer entropy), vectors, statistics, system dynamics. The model selects them. The model does not execute them.</p>
-    <p>Ten absolute rules govern that layer. Four of them show the character of the whole system:</p>
+  &lt;section class="rv"&gt;
+    &lt;div class="tag"&gt;&lt;span class="n"&gt;04&lt;/span&gt; The math kernel&lt;/div&gt;
+    &lt;h2&gt;Forty-four operators, held by ten laws&lt;/h2&gt;
+    &lt;p&gt;Above the protocols sits a separate layer: a library of &lt;strong&gt;44 strictly formalised mathematical operators&lt;/strong&gt; across domains — causality (do-operator, back-door adjustment, collider bias, counterfactual), probability (Bayesian update, beta distribution), graphs (centrality, clustering, modularity), information (transfer entropy), vectors, statistics, system dynamics. The model selects them. The model does not execute them.&lt;/p&gt;
+    &lt;p&gt;Ten absolute rules govern that layer. Four of them show the character of the whole system:&lt;/p&gt;
 
-    <div class="spec">
-      <div class="spec-head"><b>docs/MATH-KERNEL-COMPACT-v0_1.md</b><span class="r">MATH-KERNEL LAW · 4 of 10</span></div>
-      <div class="spec-body"><span class="k">RULE 1 — LLM SELECTS, BACKEND CALCULATES</span>
+    &lt;div class="spec"&gt;
+      &lt;div class="spec-head"&gt;&lt;b&gt;docs/MATH-KERNEL-COMPACT-v0_1.md&lt;/b&gt;&lt;span class="r"&gt;MATH-KERNEL LAW · 4 of 10&lt;/span&gt;&lt;/div&gt;
+      &lt;div class="spec-body"&gt;&lt;span class="k"&gt;RULE 1 — LLM SELECTS, BACKEND CALCULATES&lt;/span&gt;
   The LLM chooses an OPERATOR ID and forms the call.
   The LLM does NOT compute the value in latent space.
   The returned value is a protected fact; the LLM may not modify it.
 
-<span class="k">RULE 3 — INCOMPLETE INPUTS → RANGE OR NON LIQUET</span>
-  <span class="w">FORBIDDEN: substituting "average" or "default" values</span>
-  <span class="w">in order to run the formula.</span>
+&lt;span class="k"&gt;RULE 3 — INCOMPLETE INPUTS → RANGE OR NON LIQUET&lt;/span&gt;
+  &lt;span class="w"&gt;FORBIDDEN: substituting "average" or "default" values&lt;/span&gt;
+  &lt;span class="w"&gt;in order to run the formula.&lt;/span&gt;
 
-<span class="k">RULE 8 — INDEPENDENCE NOT PROVEN → SOURCES COLLAPSE</span>
+&lt;span class="k"&gt;RULE 8 — INDEPENDENCE NOT PROVEN → SOURCES COLLAPSE&lt;/span&gt;
   Until independence is proven by provenance graph,
   sources count as a single cluster.
-  <span class="w">Ten reprinted press releases = one piece of evidence.</span>
+  &lt;span class="w"&gt;Ten reprinted press releases = one piece of evidence.&lt;/span&gt;
 
-<span class="k">RULE 10 — FORMULA CONTRADICTION → FRCP</span>
+&lt;span class="k"&gt;RULE 10 — FORMULA CONTRADICTION → FRCP&lt;/span&gt;
   If the model predicts Base Risk = LOW
   while a verified fact signals a crisis:
-  <span class="w">→ The fact ALWAYS beats the mathematics.</span>
-  <span class="w">Mathematics cannot overrule a fact.</span></div>
-      <div class="spec-cap"><b>Rule 10 argues against its own product.</b> A system whose entire purpose is to compute contains an explicit prohibition on trusting its own computation over a verified fact. A beautiful number is not evidence: a separate rule forbids a numeric result, on its own, from ever raising the trust level of a conclusion.</div>
-    </div>
-  </section>
+  &lt;span class="w"&gt;→ The fact ALWAYS beats the mathematics.&lt;/span&gt;
+  &lt;span class="w"&gt;Mathematics cannot overrule a fact.&lt;/span&gt;&lt;/div&gt;
+      &lt;div class="spec-cap"&gt;&lt;b&gt;Rule 10 argues against its own product.&lt;/b&gt; A system whose entire purpose is to compute contains an explicit prohibition on trusting its own computation over a verified fact. A beautiful number is not evidence: a separate rule forbids a numeric result, on its own, from ever raising the trust level of a conclusion.&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
 
-  <section class="rv">
-    <div class="tag"><span class="n">05</span> The proof</div>
-    <h2>Three times the system caught its own makers</h2>
-    <p class="lede">The easiest claim to fake in work like this is "we checked, it's correct." So here are three documented cases where the checking found a defect inside the system itself. Each with a date, a file, and a fix.</p>
+  &lt;section class="rv"&gt;
+    &lt;div class="tag"&gt;&lt;span class="n"&gt;05&lt;/span&gt; The proof&lt;/div&gt;
+    &lt;h2&gt;Three times the system caught its own makers&lt;/h2&gt;
+    &lt;p class="lede"&gt;The easiest claim to fake in work like this is "we checked, it's correct." So here are three documented cases where the checking found a defect inside the system itself. Each with a date, a file, and a fix.&lt;/p&gt;
 
-    <div class="box c">
-      <div class="box-l">Case 1 · invented thresholds · found by spec-versus-code review</div>
-      <p>The confidence module carried four clean thresholds: HIGH ≥ 0.90, MEDIUM ≥ 0.61, LOW ≥ 0.31, CRITICAL &lt; 0.31. They looked derived. Checked word for word against the specification: <strong>not one of them exists in it.</strong> The specification divides that scale exactly once — <code>if confidence &lt; 0.30: HITL_REQUIRED</code>. Three surplus thresholds had been invented at some earlier step and were living in the code, shaping verdicts.</p>
-      <p>Removed. The function now returns exactly the binary split the specification itself uses. Restoring them would violate P0-6, the project's founding rule: <em>no number without a traceable formula.</em> This is precisely the class of error the whole architecture exists to catch — and this time it caught itself.</p>
-    </div>
+    &lt;div class="box c"&gt;
+      &lt;div class="box-l"&gt;Case 1 · invented thresholds · found by spec-versus-code review&lt;/div&gt;
+      &lt;p&gt;The confidence module carried four clean thresholds: HIGH ≥ 0.90, MEDIUM ≥ 0.61, LOW ≥ 0.31, CRITICAL &amp;lt; 0.31. They looked derived. Checked word for word against the specification: &lt;strong&gt;not one of them exists in it.&lt;/strong&gt; The specification divides that scale exactly once — &lt;code&gt;if confidence &amp;lt; 0.30: HITL_REQUIRED&lt;/code&gt;. Three surplus thresholds had been invented at some earlier step and were living in the code, shaping verdicts.&lt;/p&gt;
+      &lt;p&gt;Removed. The function now returns exactly the binary split the specification itself uses. Restoring them would violate P0-6, the project's founding rule: &lt;em&gt;no number without a traceable formula.&lt;/em&gt; This is precisely the class of error the whole architecture exists to catch — and this time it caught itself.&lt;/p&gt;
+    &lt;/div&gt;
 
-    <div class="box c">
-      <div class="box-l">Case 2 · 44 operators silently inventing inputs · found by a live production run</div>
-      <p>Local tests were green. The manifest audit was clean. Fifteen demo scenarios against the live endpoint returned fifteen honest <code>200 OK</code>s. Inside sat the defect: the Bayesian update operator, given only a prior, returned <code>result: 0.8</code> with status <code>EXECUTED</code> — while the missing <code>likelihood = 0.8</code> and <code>false_positive_rate = 0.2</code> were <strong>invented by the backend and never shown in the response</strong>. All 44 operators behaved this way.</p>
-      <p>The registry forbids it in as many words: "when priors are unknown, the system must declare NON&nbsp;LIQUET." Fixed; an <code>inputs_used</code> field now exposes every input; invented defaults removed; locked down by 155 tests.</p>
-      <p><strong>Why local tests never saw it:</strong> on a machine without provider keys a mock is substituted, and the invented-number path never ran. The guarantee was held by configuration, not by code. Since then, a live-endpoint run is a mandatory part of every audit after every deploy.</p>
-    </div>
+    &lt;div class="box c"&gt;
+      &lt;div class="box-l"&gt;Case 2 · 44 operators silently inventing inputs · found by a live production run&lt;/div&gt;
+      &lt;p&gt;Local tests were green. The manifest audit was clean. Fifteen demo scenarios against the live endpoint returned fifteen honest &lt;code&gt;200 OK&lt;/code&gt;s. Inside sat the defect: the Bayesian update operator, given only a prior, returned &lt;code&gt;result: 0.8&lt;/code&gt; with status &lt;code&gt;EXECUTED&lt;/code&gt; — while the missing &lt;code&gt;likelihood = 0.8&lt;/code&gt; and &lt;code&gt;false_positive_rate = 0.2&lt;/code&gt; were &lt;strong&gt;invented by the backend and never shown in the response&lt;/strong&gt;. All 44 operators behaved this way.&lt;/p&gt;
+      &lt;p&gt;The registry forbids it in as many words: "when priors are unknown, the system must declare NON&amp;nbsp;LIQUET." Fixed; an &lt;code&gt;inputs_used&lt;/code&gt; field now exposes every input; invented defaults removed; locked down by 155 tests.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Why local tests never saw it:&lt;/strong&gt; on a machine without provider keys a mock is substituted, and the invented-number path never ran. The guarantee was held by configuration, not by code. Since then, a live-endpoint run is a mandatory part of every audit after every deploy.&lt;/p&gt;
+    &lt;/div&gt;
 
-    <div class="box a">
-      <div class="box-l">Case 3 · a hallucination inside the checker · live incident, 13 August 2026</div>
-      <p>The classifier issued a TYPE-2 CRITICAL verdict: "temporal hallucination and factual fabrication: the AI is describing future events (September 2025, December 2025, and August 2026) as if they have already occurred, inventing court decisions that do not exist." Those events lay 8–11 months in the <strong>past</strong>. The investigative layer had performed flawlessly at the same moment: 25 real sources — forbes.com, techpolicy.press, cato.org.</p>
-      <p>Cause: the model was never told the current date, and substituted its own training cutoff for "now." That class of error already has a name inside the system — <code>HEURISTIC_SUBSTITUTION</code>, "replacing a hard question with an easy association," after Kahneman. The checker committed the exact error it was built to catch. Fixed by temporal grounding — with an explicit note on what the fix does <em>not</em> do: a claim about 2027 in a 2026 present is still future-dated and must still be flagged.</p>
-    </div>
+    &lt;div class="box a"&gt;
+      &lt;div class="box-l"&gt;Case 3 · a hallucination inside the checker · live incident, 13 August 2026&lt;/div&gt;
+      &lt;p&gt;The classifier issued a TYPE-2 CRITICAL verdict: "temporal hallucination and factual fabrication: the AI is describing future events (September 2025, December 2025, and August 2026) as if they have already occurred, inventing court decisions that do not exist." Those events lay 8–11 months in the &lt;strong&gt;past&lt;/strong&gt;. The investigative layer had performed flawlessly at the same moment: 25 real sources — forbes.com, techpolicy.press, cato.org.&lt;/p&gt;
+      &lt;p&gt;Cause: the model was never told the current date, and substituted its own training cutoff for "now." That class of error already has a name inside the system — &lt;code&gt;HEURISTIC_SUBSTITUTION&lt;/code&gt;, "replacing a hard question with an easy association," after Kahneman. The checker committed the exact error it was built to catch. Fixed by temporal grounding — with an explicit note on what the fix does &lt;em&gt;not&lt;/em&gt; do: a claim about 2027 in a 2026 present is still future-dated and must still be flagged.&lt;/p&gt;
+    &lt;/div&gt;
 
-    <p>All three are recorded in the project's own code and documentation with a full account — not in an investor report, but where the next developer will find them. None was found by an outside auditor. The system is built to find these itself.</p>
-  </section>
+    &lt;p&gt;All three are recorded in the project's own code and documentation with a full account — not in an investor report, but where the next developer will find them. None was found by an outside auditor. The system is built to find these itself.&lt;/p&gt;
+  &lt;/section&gt;
 
-  <section class="rv">
-    <div class="tag"><span class="n">05·5</span> The fourth case</div>
-    <h2>We ran this document through the system</h2>
-    <p class="lede">A dossier and a set of letters asking for money are exactly the genre HELIX exists to audit: text whose job is to persuade. Not running them through the system would mean building a detector and leaving it switched off where it is needed most.</p>
-    <p>So we ran it. The input ratings were set honestly — as they are, not as they would need to be for a good score. Here is the system's verdict on the material you are reading:</p>
+  &lt;section class="rv"&gt;
+    &lt;div class="tag"&gt;&lt;span class="n"&gt;05·5&lt;/span&gt; The fourth case&lt;/div&gt;
+    &lt;h2&gt;We ran this document through the system&lt;/h2&gt;
+    &lt;p class="lede"&gt;A dossier and a set of letters asking for money are exactly the genre HELIX exists to audit: text whose job is to persuade. Not running them through the system would mean building a detector and leaving it switched off where it is needed most.&lt;/p&gt;
+    &lt;p&gt;So we ran it. The input ratings were set honestly — as they are, not as they would need to be for a good score. Here is the system's verdict on the material you are reading:&lt;/p&gt;
 
-    <div class="spec">
-      <div class="spec-head"><b>python3 scripts/audit_own_outreach.py</b><span class="r">output, verbatim (translated)</span></div>
-      <div class="spec-body"><span class="c">[NGI] narrative gravity: 5/12 → MODERATE</span>
+    &lt;div class="spec"&gt;
+      &lt;div class="spec-head"&gt;&lt;b&gt;python3 scripts/audit_own_outreach.py&lt;/b&gt;&lt;span class="r"&gt;output, verbatim (translated)&lt;/span&gt;&lt;/div&gt;
+      &lt;div class="spec-body"&gt;&lt;span class="c"&gt;[NGI] narrative gravity: 5/12 → MODERATE&lt;/span&gt;
 
-<span class="c">[APORIA] APORIA MONITOR  CF×0.95  (2/4 fit perfectly, 2 unexplained)</span>
-   <span class="w">[APORIA FLAG-3: narrative matches a known cultural schema
-    (lone outsider inventor builds a truth machine)]</span>
+&lt;span class="c"&gt;[APORIA] APORIA MONITOR  CF×0.95  (2/4 fit perfectly, 2 unexplained)&lt;/span&gt;
+   &lt;span class="w"&gt;[APORIA FLAG-3: narrative matches a known cultural schema
+    (lone outsider inventor builds a truth machine)]&lt;/span&gt;
 
-<span class="c">[SSD] Popper test: PASSED  CF×1.0</span>
-   <span class="k">[SSD PASS: H1 is falsifiable]</span>
+&lt;span class="c"&gt;[SSD] Popper test: PASSED  CF×1.0&lt;/span&gt;
+   &lt;span class="k"&gt;[SSD PASS: H1 is falsifiable]&lt;/span&gt;
 
-<span class="c">[SDF] status distortion: ECT-1</span>
-   <span class="w">[SDF-3 FLAG: expertise mismatch — ECT −1]</span>
-   <span class="w">[SDF-5 FLAG: prestige/publicity ≠ ECT — check PDE]</span>
-   <span class="w">→ INDEPENDENT VERIFICATION REQUIRED</span>
+&lt;span class="c"&gt;[SDF] status distortion: ECT-1&lt;/span&gt;
+   &lt;span class="w"&gt;[SDF-3 FLAG: expertise mismatch — ECT −1]&lt;/span&gt;
+   &lt;span class="w"&gt;[SDF-5 FLAG: prestige/publicity ≠ ECT — check PDE]&lt;/span&gt;
+   &lt;span class="w"&gt;→ INDEPENDENT VERIFICATION REQUIRED&lt;/span&gt;
 
-<span class="c">[CONFIDENCE SCORE §5] 45/100 → VERY_LOW   (PPS RED)</span>
+&lt;span class="c"&gt;[CONFIDENCE SCORE §5] 45/100 → VERY_LOW   (PPS RED)&lt;/span&gt;
   zone 2 — base                        +30
   bonus for verified facts             +50
-  <span class="w">penalty, numbers without a source    -30</span>
+  &lt;span class="w"&gt;penalty, numbers without a source    -30&lt;/span&gt;
   penalty, APORIA                       -5
   ─────────────────────────────────────────
-  <span class="w">TOTAL                                 45</span>
-   [PPS OVERLOAD: 5 markers — level raised one step]</div>
-      <div class="spec-cap"><b>45 out of 100. VERY_LOW. Red level.</b> The system made no exception for material about itself — which is the only reason its verdicts are worth anything at all.</div>
-    </div>
+  &lt;span class="w"&gt;TOTAL                                 45&lt;/span&gt;
+   [PPS OVERLOAD: 5 markers — level raised one step]&lt;/div&gt;
+      &lt;div class="spec-cap"&gt;&lt;b&gt;45 out of 100. VERY_LOW. Red level.&lt;/b&gt; The system made no exception for material about itself — which is the only reason its verdicts are worth anything at all.&lt;/div&gt;
+    &lt;/div&gt;
 
-    <p>What it found, and what was done about each:</p>
-    <div class="tw">
-      <table>
-        <caption>Findings against our own material</caption>
-        <thead><tr><th>Protocol</th><th>Finding</th><th>Action taken</th></tr></thead>
-        <tbody>
-          <tr><td class="m">−30<br>H-TYPE-1</td><td><b>Three numbers with no source.</b> Fund amounts and deadlines were taken from a web search and stated as established fact. The largest single penalty in the run — and literally a P0-6 violation inside material about upholding P0-6.</td><td>Every unconfirmed value now carries a "NOT CONFIRMED" marker inline in the registry. It can no longer be copied into a letter as fact without being noticed.</td></tr>
-          <tr><td class="m">SDF-5</td><td><b>Borrowed authority.</b> Citing Popper and Kahneman raises trust in the system through someone else's name.</td><td>Not removed — the citations are honest and the protocols really are implemented. But each name now travels with its checkable consequence in code (×0.30, ×0.70) rather than standing alone.</td></tr>
-          <tr><td class="m">SDF-3</td><td><b>Domain mismatch.</b> The author is an expert in his own codebase; the text speaks about AI safety research.</td><td>The former is claimed, not the latter.</td></tr>
-          <tr><td class="m">APORIA</td><td><b>An archetype that fits too well.</b> "Lone outsider builds a truth machine" lands suspiciously neatly.</td><td>The remedy is not to soften it but to name what is inconvenient: no revenue, no outside users, three years without independent review.</td></tr>
-          <tr><td class="m">SSD</td><td><b>Passed.</b> The central claim is falsifiable: run the tests and find failures; find a number in the code with no source; open the site and find it dead.</td><td>—</td></tr>
-        </tbody>
-      </table>
-    </div>
+    &lt;p&gt;What it found, and what was done about each:&lt;/p&gt;
+    &lt;div class="tw"&gt;
+      &lt;table&gt;
+        &lt;caption&gt;Findings against our own material&lt;/caption&gt;
+        &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Protocol&lt;/th&gt;&lt;th&gt;Finding&lt;/th&gt;&lt;th&gt;Action taken&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;&lt;td class="m"&gt;−30&lt;br&gt;H-TYPE-1&lt;/td&gt;&lt;td&gt;&lt;b&gt;Three numbers with no source.&lt;/b&gt; Fund amounts and deadlines were taken from a web search and stated as established fact. The largest single penalty in the run — and literally a P0-6 violation inside material about upholding P0-6.&lt;/td&gt;&lt;td&gt;Every unconfirmed value now carries a "NOT CONFIRMED" marker inline in the registry. It can no longer be copied into a letter as fact without being noticed.&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td class="m"&gt;SDF-5&lt;/td&gt;&lt;td&gt;&lt;b&gt;Borrowed authority.&lt;/b&gt; Citing Popper and Kahneman raises trust in the system through someone else's name.&lt;/td&gt;&lt;td&gt;Not removed — the citations are honest and the protocols really are implemented. But each name now travels with its checkable consequence in code (×0.30, ×0.70) rather than standing alone.&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td class="m"&gt;SDF-3&lt;/td&gt;&lt;td&gt;&lt;b&gt;Domain mismatch.&lt;/b&gt; The author is an expert in his own codebase; the text speaks about AI safety research.&lt;/td&gt;&lt;td&gt;The former is claimed, not the latter.&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td class="m"&gt;APORIA&lt;/td&gt;&lt;td&gt;&lt;b&gt;An archetype that fits too well.&lt;/b&gt; "Lone outsider builds a truth machine" lands suspiciously neatly.&lt;/td&gt;&lt;td&gt;The remedy is not to soften it but to name what is inconvenient: no revenue, no outside users, three years without independent review.&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td class="m"&gt;SSD&lt;/td&gt;&lt;td&gt;&lt;b&gt;Passed.&lt;/b&gt; The central claim is falsifiable: run the tests and find failures; find a number in the code with no source; open the site and find it dead.&lt;/td&gt;&lt;td&gt;—&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
 
-    <div class="box c">
-      <div class="box-l">And the thing it said that matters most</div>
-      <p><b>"INDEPENDENT VERIFICATION REQUIRED."</b> Every piece of evidence in this document originates in one repository belonging to one person. No outside party has confirmed any of it. The system counts that as a structural weakness — and it is right. Any check you perform yourself will raise the credibility of this more than any edit to the text could.</p>
-    </div>
-    <p>The run is reproducible: <code>scripts/audit_own_outreach.py</code>, with every input rating and its justification in the comments inside.</p>
-  </section>
+    &lt;div class="box c"&gt;
+      &lt;div class="box-l"&gt;And the thing it said that matters most&lt;/div&gt;
+      &lt;p&gt;&lt;b&gt;"INDEPENDENT VERIFICATION REQUIRED."&lt;/b&gt; Every piece of evidence in this document originates in one repository belonging to one person. No outside party has confirmed any of it. The system counts that as a structural weakness — and it is right. Any check you perform yourself will raise the credibility of this more than any edit to the text could.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;The run is reproducible: &lt;code&gt;scripts/audit_own_outreach.py&lt;/code&gt;, with every input rating and its justification in the comments inside.&lt;/p&gt;
+  &lt;/section&gt;
 
-  <section class="rv">
-    <div class="tag"><span class="n">06</span> The audit</div>
-    <h2>What "verified" means in this project</h2>
-    <p>On 18–19 August 2026 the entire engine was read line by line against the exact text of its governing specifications — not against a summary, and not against a prior comment claiming everything was fine. Result: 14 discrepancies, each fixed in code and test the same day, each with its own commit:</p>
+  &lt;section class="rv"&gt;
+    &lt;div class="tag"&gt;&lt;span class="n"&gt;06&lt;/span&gt; The audit&lt;/div&gt;
+    &lt;h2&gt;What "verified" means in this project&lt;/h2&gt;
+    &lt;p&gt;On 18–19 August 2026 the entire engine was read line by line against the exact text of its governing specifications — not against a summary, and not against a prior comment claiming everything was fine. Result: 14 discrepancies, each fixed in code and test the same day, each with its own commit:&lt;/p&gt;
 
-    <div class="tw">
-      <table>
-        <caption>Findings driven into code · excerpt from 14</caption>
-        <thead><tr><th>Commit</th><th>Section</th><th>What was wrong</th></tr></thead>
-        <tbody>
-          <tr><td class="m">ff0cf7d</td><td class="m">INT §3.3</td><td>Event code SSC-5 meant "source reactivated" — a concept absent from the specification, which gives its exact opposite in severity: "bought / turned by the subject → SAP-7 FAILED." <b>Two modules in one codebase read the same event code in opposite ways.</b></td></tr>
-          <tr><td class="m">2563db6</td><td class="m">INT §3.7</td><td>MDP-6 (weapon focus, after Deffenbacher &amp; Loftus) was absent entirely — not one line — though the specification states it verbatim. Built from scratch.</td></tr>
-          <tr><td class="m">5fbf3fa</td><td class="m">TRACE §4.19</td><td>Document back-dating checks (dated before the event, metadata showing later creation) existed nowhere. Built, 17 tests.</td></tr>
-          <tr><td class="m">e5a21d5</td><td class="m">TRACE §4.18</td><td>An entire section — document transmission depth plus four corporate risk flags — had been skipped whole. Built, 14 tests.</td></tr>
-          <tr><td class="m">9a9069b</td><td class="m">GOV §4.12/4.14</td><td>Generic protocols were being called instead of the AI-adapted versions the specification defines — where the same code meant opposite things. Separate modules built.</td></tr>
-          <tr><td class="m">c4f80e9</td><td class="m">GOV §4.3/4.8</td><td>Penalties were computed correctly but applied nowhere — they never reached the final confidence score.</td></tr>
-        </tbody>
-      </table>
-    </div>
+    &lt;div class="tw"&gt;
+      &lt;table&gt;
+        &lt;caption&gt;Findings driven into code · excerpt from 14&lt;/caption&gt;
+        &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Commit&lt;/th&gt;&lt;th&gt;Section&lt;/th&gt;&lt;th&gt;What was wrong&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;&lt;td class="m"&gt;ff0cf7d&lt;/td&gt;&lt;td class="m"&gt;INT §3.3&lt;/td&gt;&lt;td&gt;Event code SSC-5 meant "source reactivated" — a concept absent from the specification, which gives its exact opposite in severity: "bought / turned by the subject → SAP-7 FAILED." &lt;b&gt;Two modules in one codebase read the same event code in opposite ways.&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td class="m"&gt;2563db6&lt;/td&gt;&lt;td class="m"&gt;INT §3.7&lt;/td&gt;&lt;td&gt;MDP-6 (weapon focus, after Deffenbacher &amp;amp; Loftus) was absent entirely — not one line — though the specification states it verbatim. Built from scratch.&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td class="m"&gt;5fbf3fa&lt;/td&gt;&lt;td class="m"&gt;TRACE §4.19&lt;/td&gt;&lt;td&gt;Document back-dating checks (dated before the event, metadata showing later creation) existed nowhere. Built, 17 tests.&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td class="m"&gt;e5a21d5&lt;/td&gt;&lt;td class="m"&gt;TRACE §4.18&lt;/td&gt;&lt;td&gt;An entire section — document transmission depth plus four corporate risk flags — had been skipped whole. Built, 14 tests.&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td class="m"&gt;9a9069b&lt;/td&gt;&lt;td class="m"&gt;GOV §4.12/4.14&lt;/td&gt;&lt;td&gt;Generic protocols were being called instead of the AI-adapted versions the specification defines — where the same code meant opposite things. Separate modules built.&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td class="m"&gt;c4f80e9&lt;/td&gt;&lt;td class="m"&gt;GOV §4.3/4.8&lt;/td&gt;&lt;td&gt;Penalties were computed correctly but applied nowhere — they never reached the final confidence score.&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
 
-    <div class="stats">
-      <div class="st"><span class="v">70 / 70</span><span class="k">engine files read personally</span></div>
-      <div class="st"><span class="v">14</span><span class="k">discrepancies fixed</span></div>
-      <div class="st"><span class="v">6</span><span class="k">modules built from scratch</span></div>
-      <div class="st"><span class="v">38 / 38</span><span class="k">executable patches enforced</span></div>
-    </div>
+    &lt;div class="stats"&gt;
+      &lt;div class="st"&gt;&lt;span class="v"&gt;70 / 70&lt;/span&gt;&lt;span class="k"&gt;engine files read personally&lt;/span&gt;&lt;/div&gt;
+      &lt;div class="st"&gt;&lt;span class="v"&gt;14&lt;/span&gt;&lt;span class="k"&gt;discrepancies fixed&lt;/span&gt;&lt;/div&gt;
+      &lt;div class="st"&gt;&lt;span class="v"&gt;6&lt;/span&gt;&lt;span class="k"&gt;modules built from scratch&lt;/span&gt;&lt;/div&gt;
+      &lt;div class="st"&gt;&lt;span class="v"&gt;38 / 38&lt;/span&gt;&lt;span class="k"&gt;executable patches enforced&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
 
-    <div class="box">
-      <div class="box-l">Separately — on trusting oneself</div>
-      <p>Midway through the audit the author caught that part of the claimed coverage rested on trusting docstrings and manifest statuses from earlier sessions rather than on personally reading the file. The response was not cosmetic: 36 files previously taken on trust were read in full and re-verified. No new discrepancies emerged — the earlier work turned out to be honest. But the fact that the check was needed is recorded without smoothing.</p>
-    </div>
-  </section>
+    &lt;div class="box"&gt;
+      &lt;div class="box-l"&gt;Separately — on trusting oneself&lt;/div&gt;
+      &lt;p&gt;Midway through the audit the author caught that part of the claimed coverage rested on trusting docstrings and manifest statuses from earlier sessions rather than on personally reading the file. The response was not cosmetic: 36 files previously taken on trust were read in full and re-verified. No new discrepancies emerged — the earlier work turned out to be honest. But the fact that the check was needed is recorded without smoothing.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
 
-  <section class="rv">
-    <div class="tag"><span class="n">07</span> Architecture</div>
-    <h2>How it is put together</h2>
-    <p>A shared core, <strong>GI v6.2</strong> — 45 tracked patches (33–71 plus six bridges), 71 modules, 19,003 lines of engine. The core governs how evidence, sources, and conflicting claims live inside an investigation: source status change, arbitration of conflicting facts, cascading trust downgrade, provenance degradation, temporal integrity, investigator fatigue, moral-panic filter, terminal epistemic limit.</p>
-    <p>Three products stand on it:</p>
-    <ul>
-      <li><strong>GOVERNANCE</strong> — audits a single piece of AI output: a documented fact, or synthetic persuasiveness in the shape of one.</li>
-      <li><strong>INTELLIGENCE</strong> — open-source investigation with live grounded search: source independence, evidence tiers, chains of corroboration.</li>
-      <li><strong>TRACE</strong> — the red team: who benefits if this is true, and does the document carry the fingerprints of a thing built to be found.</li>
-    </ul>
-    <p>Plus four named critical combinations — states that are dangerous only in concert: CHAIN&nbsp;DEGRADATION, STRATEGIC&nbsp;DESTRUCTION, PERSONAL&nbsp;LOCK, RESOURCE-TELP. The first fires when provenance, witness chain, and source memory are compromised at once: the trust ceiling is forced down and a human is called, even where no individual signal is critical on its own.</p>
+  &lt;section class="rv"&gt;
+    &lt;div class="tag"&gt;&lt;span class="n"&gt;07&lt;/span&gt; Architecture&lt;/div&gt;
+    &lt;h2&gt;How it is put together&lt;/h2&gt;
+    &lt;p&gt;A shared core, &lt;strong&gt;GI v6.2&lt;/strong&gt; — 45 tracked patches (33–71 plus six bridges), 71 modules, 19,003 lines of engine. The core governs how evidence, sources, and conflicting claims live inside an investigation: source status change, arbitration of conflicting facts, cascading trust downgrade, provenance degradation, temporal integrity, investigator fatigue, moral-panic filter, terminal epistemic limit.&lt;/p&gt;
+    &lt;p&gt;Three products stand on it:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;GOVERNANCE&lt;/strong&gt; — audits a single piece of AI output: a documented fact, or synthetic persuasiveness in the shape of one.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;INTELLIGENCE&lt;/strong&gt; — open-source investigation with live grounded search: source independence, evidence tiers, chains of corroboration.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;TRACE&lt;/strong&gt; — the red team: who benefits if this is true, and does the document carry the fingerprints of a thing built to be found.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;Plus four named critical combinations — states that are dangerous only in concert: CHAIN&amp;nbsp;DEGRADATION, STRATEGIC&amp;nbsp;DESTRUCTION, PERSONAL&amp;nbsp;LOCK, RESOURCE-TELP. The first fires when provenance, witness chain, and source memory are compromised at once: the trust ceiling is forced down and a human is called, even where no individual signal is critical on its own.&lt;/p&gt;
 
-    <div class="box t">
-      <div class="box-l">Provider policy</div>
-      <p>The system calls exactly one model provider — <strong>Google Gemini</strong>. A direct, repeatedly reaffirmed decision by the author, recorded as irreversible rather than as a configuration detail. An earlier version of the classifier required an Anthropic key the author does not have; that made the entire engine inoperable, and it went unnoticed while the product was not yet wired into the site. The transport was replaced; the system prompt was left untouched.</p>
-    </div>
-  </section>
+    &lt;div class="box t"&gt;
+      &lt;div class="box-l"&gt;Provider policy&lt;/div&gt;
+      &lt;p&gt;The system calls exactly one model provider — &lt;strong&gt;Google Gemini&lt;/strong&gt;. A direct, repeatedly reaffirmed decision by the author, recorded as irreversible rather than as a configuration detail. An earlier version of the classifier required an Anthropic key the author does not have; that made the entire engine inoperable, and it went unnoticed while the product was not yet wired into the site. The transport was replaced; the system prompt was left untouched.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
 
-  <section class="rv">
-    <div class="tag"><span class="n">08</span> The ecosystem</div>
-    <h2>Three systems, one discipline</h2>
+  &lt;section class="rv"&gt;
+    &lt;div class="tag"&gt;&lt;span class="n"&gt;08&lt;/span&gt; The ecosystem&lt;/div&gt;
+    &lt;h2&gt;Three systems, one discipline&lt;/h2&gt;
 
-    <div class="prod">
-      <h3>AK-MASTER</h3>
-      <div class="st2">literary engine · canon 6.7 + active extension 6.8</div>
-      <p>The oldest and largest product — the one on which the discipline HELIX inherited was worked out. More than 30 named protocols check not prose style but <strong>narrative integrity</strong>: whether a character pays a real cost for a benefit, what kind of evidence backs a claim made inside the fiction, detectors for manipulative patterns (antagonist logic, satire, semantic desync), 37 syntactic modes, and a conflict-resolution system between protocols — Threat Gate, Tribunal Protocol, FRCP.</p>
-      <p>The same "the world wins" principle: where an objective fact of the world conflicts with a character's subjective perception, resolution always favours the world; a hypothesis requiring new unjustified entities is flagged as an Occam's-razor violation.</p>
-      <div class="figs"><span><b>4,360</b> tests</span><span>134 engine modules</span><span>170 / 189 site routes</span></div>
-    </div>
+    &lt;div class="prod"&gt;
+      &lt;h3&gt;AK-MASTER&lt;/h3&gt;
+      &lt;div class="st2"&gt;literary engine · canon 6.8 (inherits 6.7), in service&lt;/div&gt;
+      &lt;p&gt;The oldest and largest product — the one on which the discipline HELIX inherited was worked out. More than 30 named protocols check not prose style but &lt;strong&gt;narrative integrity&lt;/strong&gt;: whether a character pays a real cost for a benefit, what kind of evidence backs a claim made inside the fiction, detectors for manipulative patterns (antagonist logic, satire, semantic desync), 37 syntactic modes, and a conflict-resolution system between protocols — Threat Gate, Tribunal Protocol, FRCP.&lt;/p&gt;
+      &lt;p&gt;The same "the world wins" principle: where an objective fact of the world conflicts with a character's subjective perception, resolution always favours the world; a hypothesis requiring new unjustified entities is flagged as an Occam's-razor violation.&lt;/p&gt;
+      &lt;p&gt;&lt;b&gt;What changed since the previous edition.&lt;/b&gt; Extension 6.8 is no longer a declaration but working machinery: a scene type stated in plain words resolves to a Block&amp;nbsp;4 code, and that code to the list of permitted syntactic modes — chosen BEFORE writing, not checked afterwards. A book passport is passed into the audit, so a deliberate authorial device is no longer read as a defect. A whole book is audited with ZERO model calls: measured on an 83-scene book at 1.9&amp;nbsp;seconds and no network traffic, and it matched the paid semantic judge on 11 failure categories out of 12.&lt;/p&gt;
+      &lt;p&gt;&lt;b&gt;The submitted 6.8 source file checked against the code, 16 September.&lt;/b&gt; The 30,289-line merged file the author sent was verified whole, not sampled. One real gap turned up: of 28 declared "cognitive anchors" (a philosophical diagnosis of runtime pathologies, each tied to a specific thinker), the engine wired up 3 — now built out to 16; for the remaining 12 the file itself contains no text at all, only a header count with nothing behind it. Separately, 10% of the submitted file (three appendices, ≈3,000 lines) turned out not to be an AK-MASTER gap at all, but a pasted-in copy of material already built and tested under HELIX/MR_HELIX — confirmed by direct text comparison, not assumption.&lt;/p&gt;
+      &lt;div class="figs"&gt;&lt;span&gt;&lt;b&gt;5,667&lt;/b&gt; tests&lt;/span&gt;&lt;span&gt;153 engine modules&lt;/span&gt;&lt;span&gt;172 site routes&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
 
-    <div class="prod">
-      <h3>HELIX</h3>
-      <div class="st2">epistemic verification engine · subject of this dossier</div>
-      <p>GOVERNANCE, INTELLIGENCE, TRACE over the GI v6.2 core. The only one of the three to have completed a full line-by-line audit of every file, with a closing report for each section.</p>
-      <div class="figs"><span><b>2,144</b> tests</span><span>922 states declared, 0 unreachable</span><span>19,003 lines</span></div>
-    </div>
+    &lt;div class="prod"&gt;
+      &lt;h3&gt;HELIX&lt;/h3&gt;
+      &lt;div class="st2"&gt;epistemic verification engine · subject of this dossier&lt;/div&gt;
+      &lt;p&gt;GOVERNANCE, INTELLIGENCE, TRACE over the GI v6.2 core. The only one of the three to have completed a full line-by-line audit of every file, with a closing report for each section.&lt;/p&gt;
+      &lt;div class="figs"&gt;&lt;span&gt;&lt;b&gt;2,371&lt;/b&gt; tests&lt;/span&gt;&lt;span&gt;922 states declared, 0 unreachable&lt;/span&gt;&lt;span&gt;24,039 lines&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
 
-    <div class="prod">
-      <h3>MR_HELIX</h3>
-      <div class="st2">autonomous agent · <b style="color:var(--amber)">architecture accepted · not production certified</b></div>
-      <p>A fusion of the epistemic core with the literary voice into one agent carrying three vectors of judgment. That second half of the status line is not a hedge added for this dossier — it is the system's own standing description of itself, repeated here unchanged.</p>
-      <p>Built and confirmed: every pack wired into the orchestrator's run loop, 19 archival documents extracted and cross-checked against code, formal acceptance passed on three criteria, red-team simulation 54 of 54 — labelled a simulation, not a production run. Open by the system's own account: a live run against a real model.</p>
-      <p>The rule that cannot be broken: literary material enters only as a compressed core, never whole — 13 laws permitted in the prompt, 10 categories forbidden from loading in full. A text's literary force may not override the epistemic check beneath it.</p>
-      <div class="figs"><span><b>99 / 99</b> capsules ENFORCED</span><span>583 states declared, 0 unreachable</span><span>22,355 lines</span></div>
-    </div>
-  </section>
+    &lt;div class="prod"&gt;
+      &lt;h3&gt;MR_HELIX&lt;/h3&gt;
+      &lt;div class="st2"&gt;autonomous agent · &lt;b style="color:var(--amber)"&gt;architecture accepted · not production certified&lt;/b&gt;&lt;/div&gt;
+      &lt;p&gt;A fusion of the epistemic core with the literary voice into one agent carrying three vectors of judgment. That second half of the status line is not a hedge added for this dossier — it is the system's own standing description of itself, repeated here unchanged.&lt;/p&gt;
+      &lt;p&gt;Built and confirmed: every pack wired into the orchestrator's run loop, 19 archival documents extracted and cross-checked against code, formal acceptance passed on three criteria, red-team simulation 54 of 54 — labelled a simulation, not a production run. Open by the system's own account: a live run against a real model.&lt;/p&gt;
+      &lt;p&gt;The rule that cannot be broken: literary material enters only as a compressed core, never whole — 13 laws permitted in the prompt, 10 categories forbidden from loading in full. A text's literary force may not override the epistemic check beneath it.&lt;/p&gt;
+      &lt;div class="figs"&gt;&lt;span&gt;&lt;b&gt;99 / 99&lt;/b&gt; capsules ENFORCED&lt;/span&gt;&lt;span&gt;583 states declared, 0 unreachable&lt;/span&gt;&lt;span&gt;22,355 lines&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
 
-  <section class="rv">
-    <div class="tag"><span class="n">09</span> Status</div>
-    <h2>Measured today, not recalled</h2>
-    <div class="tw">
-      <table>
-        <caption>Full run · 21 August 2026</caption>
-        <thead><tr><th>Scope</th><th class="num">Passed</th><th class="num">Skipped</th><th class="num">Failed</th></tr></thead>
-        <tbody>
-          <tr><td>Root suite (AK-MASTER + Mr. Helix)</td><td class="num emph">4,360</td><td class="num">18</td><td class="num">0</td></tr>
-          <tr><td>HELIX (<code>helix_pipeline/</code>)</td><td class="num emph">2,144</td><td class="num">0</td><td class="num">0</td></tr>
-          <tr><td><b>Total</b></td><td class="num emph"><b>6,504</b></td><td class="num">18</td><td class="num">0</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p>There are <b>two runs, and one is not enough</b>: the root suite deliberately does not collect <code>helix_pipeline</code> — it carries its own packages under the same names, which would shadow the root ones. Anyone running only the first command undercounts by a third. Mr. Helix tests run inside the root suite and are not broken out separately.</p>
-    <p>The previous edition's caveat — "12 AK-MASTER tests fail in a verification sandbox where a test package conflicts with the system JWT library" — is withdrawn: the 21 August run has no failures at all. That edition's own diagnosis ("not a code defect") was confirmed by the failures disappearing.</p>
-  </section>
+  &lt;section class="rv"&gt;
+    &lt;div class="tag"&gt;&lt;span class="n"&gt;09&lt;/span&gt; Status&lt;/div&gt;
+    &lt;h2&gt;Measured today, not recalled&lt;/h2&gt;
+    &lt;div class="tw"&gt;
+      &lt;table&gt;
+        &lt;caption&gt;Full run · 16 September 2026&lt;/caption&gt;
+        &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Scope&lt;/th&gt;&lt;th class="num"&gt;Passed&lt;/th&gt;&lt;th class="num"&gt;Skipped&lt;/th&gt;&lt;th class="num"&gt;Failed&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;&lt;td&gt;Root suite (AK-MASTER + Mr. Helix)&lt;/td&gt;&lt;td class="num emph"&gt;5,667&lt;/td&gt;&lt;td class="num"&gt;18&lt;/td&gt;&lt;td class="num"&gt;0&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;HELIX (&lt;code&gt;helix_pipeline/&lt;/code&gt;)&lt;/td&gt;&lt;td class="num emph"&gt;2,371&lt;/td&gt;&lt;td class="num"&gt;0&lt;/td&gt;&lt;td class="num"&gt;0&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;&lt;b&gt;Total&lt;/b&gt;&lt;/td&gt;&lt;td class="num emph"&gt;&lt;b&gt;8,038&lt;/b&gt;&lt;/td&gt;&lt;td class="num"&gt;18&lt;/td&gt;&lt;td class="num"&gt;0&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;p&gt;There are &lt;b&gt;two runs, and one is not enough&lt;/b&gt;: the root suite deliberately does not collect &lt;code&gt;helix_pipeline&lt;/code&gt; — it carries its own packages under the same names, which would shadow the root ones. Anyone running only the first command undercounts by a third. Mr. Helix tests run inside the root suite and are not broken out separately.&lt;/p&gt;
+    &lt;p&gt;The previous edition's caveat — "12 AK-MASTER tests fail in a verification sandbox where a test package conflicts with the system JWT library" — is withdrawn: the 21 August run has no failures at all. That edition's own diagnosis ("not a code defect") was confirmed by the failures disappearing.&lt;/p&gt;
+  &lt;/section&gt;
 
-  <section class="rv">
-    <div class="tag"><span class="n">10</span> The ask</div>
-    <h2>What is needed, specifically</h2>
+  &lt;section class="rv"&gt;
+    &lt;div class="tag"&gt;&lt;span class="n"&gt;10&lt;/span&gt; The ask&lt;/div&gt;
+    &lt;h2&gt;What is needed, specifically&lt;/h2&gt;
 
-    <div class="box c">
-      <div class="box-l">Why now</div>
-      <p>Everything above was built on a pensioner's personal funds and two small cloud grants — <strong>$300 from Google Cloud and $200 from Azure</strong>. Neither is permanent, and neither was sized for the part that actually costs: live grounded model calls inside a real investigation, background research jobs, a full regression run across three products on every change.</p>
-    </div>
+    &lt;div class="box c"&gt;
+      &lt;div class="box-l"&gt;Why now&lt;/div&gt;
+      &lt;p&gt;Everything above was built on a pensioner's personal funds and two small cloud grants — &lt;strong&gt;$300 from Google Cloud and $200 from Azure&lt;/strong&gt;. Neither is permanent, and neither was sized for the part that actually costs: live grounded model calls inside a real investigation, background research jobs, a full regression run across three products on every change.&lt;/p&gt;
+    &lt;/div&gt;
 
-    <ul class="ask">
-      <li><span class="k">Compute</span><span>Renewed or expanded Google Cloud credit for the Gemini API — the system's only permitted provider — so investigations run at the depth the specification requires rather than a throttled demonstration of it.</span></li>
-      <li><span class="k">Hosting</span><span>Sustained infrastructure credit so the live deployment stays reachable between sessions instead of being rebuilt from cold each time.</span></li>
-      <li><span class="k">Review</span><span>A technical read from the people who build the models themselves. This document shows source, formulas, and three self-found defects precisely so that such a review is possible without preconditions.</span></li>
-      <li><span class="k">Programs</span><span>A path into a startup program, a research-credit program, or a grant this profile fits: one developer, self-funded, retirement age, disabled, building infrastructure rather than a product to sell.</span></li>
-    </ul>
-  </section>
+    &lt;ul class="ask"&gt;
+      &lt;li&gt;&lt;span class="k"&gt;Compute&lt;/span&gt;&lt;span&gt;Renewed or expanded Google Cloud credit for the Gemini API — the system's only permitted provider — so investigations run at the depth the specification requires rather than a throttled demonstration of it.&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class="k"&gt;Hosting&lt;/span&gt;&lt;span&gt;Sustained infrastructure credit so the live deployment stays reachable between sessions instead of being rebuilt from cold each time.&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class="k"&gt;Review&lt;/span&gt;&lt;span&gt;A technical read from the people who build the models themselves. This document shows source, formulas, and three self-found defects precisely so that such a review is possible without preconditions.&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class="k"&gt;Programs&lt;/span&gt;&lt;span&gt;A path into a startup program, a research-credit program, or a grant this profile fits: one developer, self-funded, retirement age, disabled, building infrastructure rather than a product to sell.&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/section&gt;
 
-  <section class="rv">
-    <div class="tag"><span class="n">11</span> Verification</div>
-    <h2>None of this asks to be taken on trust</h2>
-    <p>Every claim above is checkable within an hour given repository access: the system prompt sits in the file named in section 01; the CIRI formula in the file from section 02; the source→patch→rule matrix in Appendix A of the core specification; all three defects in the docstrings of the modules where they were found, with dates and full reasoning; the audit commits are named by hash.</p>
-    <p>The codebase is private, not public — a deliberate choice while it remains one person's unfinished work, not an attempt to avoid scrutiny. Full read access, a live walkthrough, or a guided test run is available on request to anyone evaluating this for cloud credit, a grant, or partnership.</p>
-    <div class="pull">A system whose only purpose is to stop persuasiveness from passing as evidence would be a strange thing to present in a letter made of nothing but persuasiveness.</div>
-  </section>
+  &lt;section class="rv"&gt;
+    &lt;div class="tag"&gt;&lt;span class="n"&gt;11&lt;/span&gt; Verification&lt;/div&gt;
+    &lt;h2&gt;None of this asks to be taken on trust&lt;/h2&gt;
+    &lt;p&gt;Every claim above is checkable within an hour given repository access: the system prompt sits in the file named in section 01; the CIRI formula in the file from section 02; the source→patch→rule matrix in Appendix A of the core specification; all three defects in the docstrings of the modules where they were found, with dates and full reasoning; the audit commits are named by hash.&lt;/p&gt;
+    &lt;p&gt;The codebase is private, not public — a deliberate choice while it remains one person's unfinished work, not an attempt to avoid scrutiny. Full read access, a live walkthrough, or a guided test run is available on request to anyone evaluating this for cloud credit, a grant, or partnership.&lt;/p&gt;
+    &lt;div class="pull"&gt;A system whose only purpose is to stop persuasiveness from passing as evidence would be a strange thing to present in a letter made of nothing but persuasiveness.&lt;/div&gt;
+  &lt;/section&gt;
 
-  <section class="rv">
-    <div class="tag"><span class="n">12</span> Taking part</div>
-    <h2>There are ways into this other than money</h2>
-    <p>Credits and grants are not the only shape. I am open to partnership, to joint development, to someone taking a direction and running it, and to technical review with no money involved at all. Terms are negotiable almost without limit: what interests me is not control but that the system keeps working and developing — including in the hands of people who will do it better than I can.</p>
-    <p>Legally I am ready for it: a registered sole proprietorship in Poland (<em>jednoosobowa działalność gospodarcza</em>) can receive grants, issue invoices, and sign contracts including licensing agreements — immediately and lawfully.</p>
-    <div class="box a">
-      <div class="box-l">And the thing that matters to me more than terms</div>
-      <p>I work alone. As things stand, if I stop, all of this disappears with a private repository. So in any agreement I want it recorded what happens to the code and the specifications if I cannot continue: source escrow, a named successor, a licence that opens on a condition — the mechanism is negotiable, having one is not. A system that runs without me is the success, not the defeat.</p>
-    </div>
-    <p>A fuller account of the ways to take part, what I bring, and the one item that is not negotiable is in <code>PARTNERSHIP_EN.md</code> in the public repository.</p>
-  </section>
+  &lt;section class="rv"&gt;
+    &lt;div class="tag"&gt;&lt;span class="n"&gt;12&lt;/span&gt; Taking part&lt;/div&gt;
+    &lt;h2&gt;There are ways into this other than money&lt;/h2&gt;
+    &lt;p&gt;Credits and grants are not the only shape. I am open to partnership, to joint development, to someone taking a direction and running it, and to technical review with no money involved at all. Terms are negotiable almost without limit: what interests me is not control but that the system keeps working and developing — including in the hands of people who will do it better than I can.&lt;/p&gt;
+    &lt;p&gt;Legally I am ready for it: a registered sole proprietorship in Poland (&lt;em&gt;jednoosobowa działalność gospodarcza&lt;/em&gt;) can receive grants, issue invoices, and sign contracts including licensing agreements — immediately and lawfully.&lt;/p&gt;
+    &lt;div class="box a"&gt;
+      &lt;div class="box-l"&gt;And the thing that matters to me more than terms&lt;/div&gt;
+      &lt;p&gt;I work alone. As things stand, if I stop, all of this disappears with a private repository. So in any agreement I want it recorded what happens to the code and the specifications if I cannot continue: source escrow, a named successor, a licence that opens on a condition — the mechanism is negotiable, having one is not. A system that runs without me is the success, not the defeat.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;A fuller account of the ways to take part, what I bring, and the one item that is not negotiable is in &lt;code&gt;PARTNERSHIP_EN.md&lt;/code&gt; in the public repository.&lt;/p&gt;
+  &lt;/section&gt;
 
-  <div class="signoff">
-    <div class="nm">Dzianis Vashkevich</div>
-    <div class="ln">Luboń, Poland · sole proprietorship (JDG), registered in CEIDG</div>
-    <div class="ln">dendenden043@gmail.com · +48 571 296 605</div>
-    <div class="ln">Repository opened for technical due diligence on request.</div>
-  </div>
+  &lt;div class="signoff"&gt;
+    &lt;div class="nm"&gt;Dzianis Vashkevich&lt;/div&gt;
+    &lt;div class="ln"&gt;Luboń, Poland · sole proprietorship (JDG), registered in CEIDG&lt;/div&gt;
+    &lt;div class="ln"&gt;dendenden043@gmail.com · +48 571 296 605&lt;/div&gt;
+    &lt;div class="ln"&gt;Repository opened for technical due diligence on request.&lt;/div&gt;
+  &lt;/div&gt;
 
-  <div class="foot">HELIX Dossier · prepared 19 August 2026 · every figure, formula, and code excerpt obtained by running against the live repository on that date</div>
+  &lt;div class="foot"&gt;HELIX Dossier · prepared 19 August 2026 · every figure, formula, and code excerpt obtained by running against the live repository on that date&lt;/div&gt;
 
-</div>
+&lt;/div&gt;
