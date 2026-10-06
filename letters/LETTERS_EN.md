@@ -1,5 +1,13 @@
 # Letters
 
+> ⚠️ **Out of date since 6 October 2026 — read before sending.** These letters
+> were written in August, when the system called only Google Gemini. Since
+> 6 October all three products run on **Azure OpenAI**, and the Google Cloud
+> project is closed. The letter asking Google for extended Gemini credit no
+> longer applies; the other letters still name Gemini as the only provider and
+> quote August test counts. Current figures are in the dossier
+> (`dossier/HELIX_DOSSIER_EN.html`, sections 07, 09 and 10).
+
 Four ready-to-send letters for different recipients. Adapt the greeting and the
 specifics; leave the numbers alone — they are measured, and their value is that
 they are checkable.
