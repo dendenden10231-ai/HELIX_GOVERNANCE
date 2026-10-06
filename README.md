@@ -22,6 +22,7 @@ private and are available for review on request.
 | **[Досье (русский)](dossier/HELIX_DOSSIER_RU.html)** | The same document in Russian. |
 | **[Reader's guide to the specifications](guide/SPECIFICATION_GUIDE_EN.md)** | The specifications are in Russian. This maps what lives where, names every protocol in English, and explains the vocabulary you need to read them. |
 | **[Taking part](PARTNERSHIP_EN.md)** · [(RU)](PARTNERSHIP_RU.md) | How to fund, join, partner, or simply review this — what is open to negotiation, what is not, and what happens to the work if the author stops. |
+| **[Product passports (RU)](passports/ПАСПОРТ.md)** | All three products — AK-MASTER, Mr. Helix, HELIX — in one document: what each is for, what is measured and by which command, what does not work yet. Updated 6 October 2026. Open to partnership, licensing, or acquisition. |
 | **[Letters](letters/LETTERS_EN.md)** · [(RU)](letters/LETTERS_RU.md) | The letters sent to cloud programs, model developers, and grant programs, published as sent. |
 
 **The system is live.** This is a deployed site, not a specification:
@@ -58,12 +59,13 @@ guide carry their substance in English.
 ## The numbers
 
 Measured by running against the repository on 19 August 2026 — not recalled,
-not carried forward from an older file.
+not carried forward from an older file. Code size and test count re-measured on
+6 October 2026.
 
 ```
-Python                 138,225 lines across 692 files
+Python                 200,635 lines across 967 files
 Specifications          82,801 lines
-Tests                    3,951 passing, 18 skipped, 0 failing
+Tests                    8,267 passing, 29 skipped, 0 failing
 HELIX engine            19,003 lines across 71 modules
 Engine files audited        70 of 70, line by line
 Discrepancies fixed         14, each with tests
@@ -109,6 +111,7 @@ Dzianis Vashkevich — dendenden043@gmail.com — Luboń, Poland
 | **[The dossier (English)](dossier/HELIX_DOSSIER_EN.html)** | Тот же документ на английском. |
 | **[Путеводитель по спецификациям](guide/SPECIFICATION_GUIDE_EN.md)** | На английском — для тех, кто не читает по-русски: что где лежит, все протоколы с английскими названиями, нужный словарь. |
 | **[Участие в проекте](PARTNERSHIP_RU.md)** · [(EN)](PARTNERSHIP_EN.md) | Как профинансировать, войти, стать партнёром или просто разобрать технически — что обсуждаемо, что нет, и что происходит с работой, если автор остановится. |
+| **[Паспорта продуктов](passports/ПАСПОРТ.md)** | Все три продукта — AK-MASTER, Мистер Хеликс, HELIX — в одном документе: что для чего, что измерено и какой командой, что пока не работает. Обновлено 6 октября 2026. Открыто к партнёрству, лицензированию или выкупу. |
 | **[Письма](letters/LETTERS_RU.md)** · [(EN)](letters/LETTERS_EN.md) | Письма в облачные программы, разработчикам моделей и в грантовые программы — опубликованы в том виде, в каком отправлены. |
 
 **Система работает вживую.** Это развёрнутый сайт, а не спецификация:
