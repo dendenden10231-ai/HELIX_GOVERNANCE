@@ -18,8 +18,8 @@ private and are available for review on request.
 
 | | |
 |---|---|
-| **[The dossier (English)](dossier/HELIX_DOSSIER_EN.html)** | The main document. Quotes the running system directly — the classifier prompt that forbids the model from returning numbers, the risk formula with its weights, the scientific sources compiled into executable rules, and three documented cases where the audit found a defect inside the system itself. |
-| **[Досье (русский)](dossier/HELIX_DOSSIER_RU.html)** | The same document in Russian. |
+| **[The dossier (English)](https://dendenden10231-ai.github.io/HELIX_GOVERNANCE/dossier/HELIX_DOSSIER_EN.html)** | The main document. Quotes the running system directly — the classifier prompt that forbids the model from returning numbers, the risk formula with its weights, the scientific sources compiled into executable rules, and three documented cases where the audit found a defect inside the system itself. |
+| **[Досье (русский)](https://dendenden10231-ai.github.io/HELIX_GOVERNANCE/dossier/HELIX_DOSSIER_RU.html)** | The same document in Russian. |
 | **[Reader's guide to the specifications](guide/SPECIFICATION_GUIDE_EN.md)** | The specifications are in Russian. This maps what lives where, names every protocol in English, and explains the vocabulary you need to read them. |
 | **[Taking part](PARTNERSHIP_EN.md)** · [(RU)](PARTNERSHIP_RU.md) | How to fund, join, partner, or simply review this — what is open to negotiation, what is not, and what happens to the work if the author stops. |
 | **[Product passports (RU)](passports/ПАСПОРТ.md)** | All three products — AK-MASTER, Mr. Helix, HELIX — in one document: what each is for, what is measured and by which command, what does not work yet. Updated 6 October 2026. Open to partnership, licensing, or acquisition. |
@@ -107,8 +107,8 @@ Dzianis Vashkevich — dendenden043@gmail.com — Luboń, Poland
 
 | | |
 |---|---|
-| **[Досье (русский)](dossier/HELIX_DOSSIER_RU.html)** | Главный документ. Показывает работающую систему напрямую: промпт классификатора, запрещающий модели возвращать числа; формулу риска с весами; научные источники, превращённые в исполняемые правила; три задокументированных случая, когда проверка нашла дефект внутри самой системы. |
-| **[The dossier (English)](dossier/HELIX_DOSSIER_EN.html)** | Тот же документ на английском. |
+| **[Досье (русский)](https://dendenden10231-ai.github.io/HELIX_GOVERNANCE/dossier/HELIX_DOSSIER_RU.html)** | Главный документ. Показывает работающую систему напрямую: промпт классификатора, запрещающий модели возвращать числа; формулу риска с весами; научные источники, превращённые в исполняемые правила; три задокументированных случая, когда проверка нашла дефект внутри самой системы. |
+| **[The dossier (English)](https://dendenden10231-ai.github.io/HELIX_GOVERNANCE/dossier/HELIX_DOSSIER_EN.html)** | Тот же документ на английском. |
 | **[Путеводитель по спецификациям](guide/SPECIFICATION_GUIDE_EN.md)** | На английском — для тех, кто не читает по-русски: что где лежит, все протоколы с английскими названиями, нужный словарь. |
 | **[Участие в проекте](PARTNERSHIP_RU.md)** · [(EN)](PARTNERSHIP_EN.md) | Как профинансировать, войти, стать партнёром или просто разобрать технически — что обсуждаемо, что нет, и что происходит с работой, если автор остановится. |
 | **[Паспорта продуктов](passports/ПАСПОРТ.md)** | Все три продукта — AK-MASTER, Мистер Хеликс, HELIX — в одном документе: что для чего, что измерено и какой командой, что пока не работает. Обновлено 6 октября 2026. Открыто к партнёрству, лицензированию или выкупу. |
