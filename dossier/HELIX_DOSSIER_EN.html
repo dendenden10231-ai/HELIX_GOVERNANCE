@@ -265,9 +265,9 @@
     <p class="sub">A machine that will not let a language model <em>assign</em> a number — and that has caught its own authors doing it.</p>
 
     <div class="counters">
-      <div class="ct"><span class="v">200,635</span><span class="k">lines of Python</span></div>
+      <div class="ct"><span class="v">207,504</span><span class="k">lines of Python</span></div>
       <div class="ct"><span class="v">82,801</span><span class="k">lines of specification</span></div>
-      <div class="ct"><span class="v">8,267</span><span class="k">tests, zero failing</span></div>
+      <div class="ct"><span class="v">8,456</span><span class="k">tests, zero failing</span></div>
       <div class="ct"><span class="v">922 / 0</span><span class="k">spec states / unreachable</span></div>
       <div class="ct"><span class="v">14</span><span class="k">discrepancies found &amp; fixed</span></div>
     </div>
@@ -275,7 +275,7 @@
     <dl class="metabar">
       <div><dt>Built by</dt><dd>one person, retired</dd></div>
       <div><dt>Funding</dt><dd>personal + $500 in credits</dd></div>
-      <div><dt>Dated</dt><dd>19 August 2026, updated 6 October 2026</dd></div>
+      <div><dt>Dated</dt><dd>19 August 2026, updated 7 October 2026</dd></div>
       <div><dt>Open to</dt><dd>partnership, licensing, acquisition, cloud credits</dd></div>
     </dl>
   </header>
@@ -318,6 +318,17 @@
       <div class="box-l">Address</div>
       <p style="font-family:var(--f-mono);font-size:15px"><a href="https://web-production-b540f.up.railway.app">web-production-b540f.up.railway.app</a></p>
       <p>Three products on one engine, live model calls, real open-source investigations with live web search and five scientific databases. Sign-in via Google. If you are evaluating this for credit, a grant, or partnership — write, and I will walk you through the system personally, including the parts I consider weak.</p>
+    </div>
+    <div class="box t">
+      <div class="box-l">7 October 2026 · HELIX runs in full</div>
+      <p>A single investigation on the site now runs all three vectors:</p>
+      <ul>
+        <li><strong>INTELLIGENCE</strong> — live search rounds, the gate that strips figures without a source, and investigation protocols driven by text labels: source anonymity, source recency to the event, external check of claims, document provenance, Popper falsifiability, narrative gravity, the "too perfect" test, divergence of accounts, chronology; plus the report procedure §4–§9.</li>
+        <li><strong>TRACE</strong> is no longer skipped: 14 manipulation-check protocols run with no human input — who benefits, injected narrative, source silence, authority pressure, corporate patterns, source monopoly, environment, moral panic, competing-hypotheses matrix. The manipulation risk index uses a short questionnaire filled in by the person: the machine does not invent the state of the investigation.</li>
+        <li><strong>GOVERNANCE</strong> — the full layer: claim zones, a check of every named source, the 0–100 confidence score and the complete "human required" list.</li>
+      </ul>
+      <p><b>What a human must check — the author's rule.</b> A claim counts as verified when it is backed by a primary source (the claimant's own publication, actually retrieved by search) or by two or more independent retrieved sources. Only the remaining claims go to a human — as a list with a percentage, not the whole report.</p>
+      <p><b>Live runs.</b> "The Great Wall is visible from space": 18 sources, the system verified 10 claims itself (7 from NASA and ESA primary sources), 6 of 16 left for a human, decision PASS. A news story about Microsoft and Meta cutting internal Claude use: everything traced back to one paywalled article — HELIX reported "source independence = 0" and honestly sent the whole report to a human. Reports download as Word or Markdown.</p>
     </div>
     <p>The figures in this dossier do not describe an intention. They are measurements of a working thing.</p>
   </section>
@@ -539,7 +550,7 @@
   <section class="rv">
     <div class="tag"><span class="n">07</span> Architecture</div>
     <h2>How it is put together</h2>
-    <p>A shared core, <strong>GI v6.2</strong> — 45 tracked patches (33–71 plus six bridges), 71 modules, 19,003 lines of engine. The core governs how evidence, sources, and conflicting claims live inside an investigation: source status change, arbitration of conflicting facts, cascading trust downgrade, provenance degradation, temporal integrity, investigator fatigue, moral-panic filter, terminal epistemic limit.</p>
+    <p>A shared core, <strong>GI v6.2</strong> — 45 tracked patches (33–71 plus six bridges); the HELIX engine today is 92 modules, 29,335 lines. The core governs how evidence, sources, and conflicting claims live inside an investigation: source status change, arbitration of conflicting facts, cascading trust downgrade, provenance degradation, temporal integrity, investigator fatigue, moral-panic filter, terminal epistemic limit.</p>
     <p>Three products stand on it:</p>
     <ul>
       <li><strong>GOVERNANCE</strong> — audits a single piece of AI output: a documented fact, or synthetic persuasiveness in the shape of one.</li>
@@ -550,7 +561,7 @@
 
     <div class="box t">
       <div class="box-l">Provider policy</div>
-      <p>Since 6 October 2026 all three products call one model provider — <strong>Azure OpenAI</strong>; a user may still bring their own Google key, which then takes precedence for that one request. This replaced the earlier Gemini-only rule, and the reason is recorded rather than hidden: the Google Cloud project was closed for billing in late August, after which every investigation on the site answered “no provider key”. The semantic judge of AK-MASTER had already moved to Azure in mid-September. Web search for investigations now runs through the Azure Responses API; where the deployment does not accept the search tool, the answer is labelled as ungrounded rather than passed off as found. An even earlier version of the classifier required an Anthropic key the author does not have; that made the engine inoperable until the transport was replaced, with the system prompt left untouched.</p>
+      <p>Since 6 October 2026 all three products call one model provider — <strong>Azure OpenAI</strong>; the personal Google key field has been removed from the site. This replaced the earlier Gemini-only rule, and the reason is recorded rather than hidden: the Google Cloud project was closed for billing in late August, after which every investigation on the site answered “no provider key”. The semantic judge of AK-MASTER had already moved to Azure in mid-September. Web search for investigations now runs through the Azure Responses API; where the deployment does not accept the search tool, the answer is labelled as ungrounded rather than passed off as found. An even earlier version of the classifier required an Anthropic key the author does not have; that made the engine inoperable until the transport was replaced, with the system prompt left untouched.</p>
     </div>
   </section>
 
@@ -560,19 +571,22 @@
 
     <div class="prod">
       <h3>AK-MASTER</h3>
-      <div class="st2">literary engine · canon 6.8 (inherits 6.7), in service</div>
+      <div class="st2">literary engine · canon 6.8 (inherits 6.7) · updated 7 October 2026</div>
       <p>The oldest and largest product — the one on which the discipline HELIX inherited was worked out. More than 30 named protocols check not prose style but <strong>narrative integrity</strong>: whether a character pays a real cost for a benefit, what kind of evidence backs a claim made inside the fiction, detectors for manipulative patterns (antagonist logic, satire, semantic desync), 37 syntactic modes, and a conflict-resolution system between protocols — Threat Gate, Tribunal Protocol, FRCP.</p>
       <p>The same "the world wins" principle: where an objective fact of the world conflicts with a character's subjective perception, resolution always favours the world; a hypothesis requiring new unjustified entities is flagged as an Occam's-razor violation.</p>
       <p><b>What changed since the previous edition.</b> Extension 6.8 is no longer a declaration but working machinery: a scene type stated in plain words resolves to a Block&nbsp;4 code, and that code to the list of permitted syntactic modes — chosen BEFORE writing, not checked afterwards. A book passport is passed into the audit, so a deliberate authorial device is no longer read as a defect. A whole book is audited with ZERO model calls: measured on an 83-scene book at 1.9&nbsp;seconds and no network traffic, and it matched the paid semantic judge on 11 failure categories out of 12.</p>
       <p><b>The submitted 6.8 source file checked against the code, 16 September.</b> The 30,289-line merged file the author sent was verified whole, not sampled. One real gap turned up: of 28 declared "cognitive anchors" (a philosophical diagnosis of runtime pathologies, each tied to a specific thinker), the engine wired up 3 — now built out to 16; for the remaining 12 the file itself contains no text at all, only a header count with nothing behind it. Separately, 10% of the submitted file (three appendices, ≈3,000 lines) turned out not to be an AK-MASTER gap at all, but a pasted-in copy of material already built and tested under HELIX/MR_HELIX — confirmed by direct text comparison, not assumption.</p>
-      <div class="figs"><span><b>5,888</b> tests</span><span>153 engine modules</span><span>172 site routes</span></div>
+      <p><b>What arrived since late August</b> (91 engine and canon changes, 22 new modules). New detectors name the exact spot in words: monotonous gestures, empty dialogue, monotonous weather, broken time intervals, forbidden verbatim phrases, traces of machine generation, invisible characters, scene type from a description. The whole library — 29 books, 2,428 scenes — was audited without a single model call. The paid semantic judge moved to Azure; 42–46% of non-literary ballast (duplicates, internal reports) was removed from the canon it receives on every call, with all the literature kept. A prefilter for the most expensive check (TST-TW) picks candidate scenes at 69% precision and 51% recall — so it is a prefilter, not a verdict — and saves 57% of judge calls. The site has a "Check a chapter" screen: free audit, judge on request.</p>
+      <p><b>Audiobooks.</b> Russian is read by Azure (voice Dmitry), Polish by Azure (voice Marek), English by Mistral. Before narration the letter «ё» is restored wherever the reading is unambiguous; ambiguous cases stay with the author. Google options were removed from the narration screen.</p>
+      <p><b>Discipline as a server.</b> The site exposes 24 canon tools over MCP: a book can be written in Claude, Cursor or Claude Desktop while the canon checks the text live.</p>
+      <div class="figs"><span>156 engine modules</span><span>182 site routes</span><span>13 of 14 canon blocks enforced in code, 0 blocking gaps</span></div>
     </div>
 
     <div class="prod">
       <h3>HELIX</h3>
       <div class="st2">epistemic verification engine · subject of this dossier</div>
       <p>GOVERNANCE, INTELLIGENCE, TRACE over the GI v6.2 core. The only one of the three to have completed a full line-by-line audit of every file, with a closing report for each section.</p>
-      <div class="figs"><span><b>2,379</b> tests</span><span>922 states declared, 0 unreachable</span><span>24,039 lines</span></div>
+      <div class="figs"><span><b>2,497</b> tests</span><span>922 states declared, 0 unreachable</span><span>29,335 lines</span><span>three vectors live</span></div>
     </div>
 
     <div class="prod">
@@ -590,12 +604,13 @@
     <h2>Measured today, not recalled</h2>
     <div class="tw">
       <table>
-        <caption>Full run · 6 October 2026</caption>
+        <caption>Full run · 7 October 2026</caption>
         <thead><tr><th>Scope</th><th class="num">Passed</th><th class="num">Skipped</th><th class="num">Failed</th></tr></thead>
         <tbody>
-          <tr><td>Root suite (AK-MASTER + Mr. Helix)</td><td class="num emph">5,888</td><td class="num">29</td><td class="num">0</td></tr>
-          <tr><td>HELIX (<code>helix_pipeline/</code>)</td><td class="num emph">2,379</td><td class="num">0</td><td class="num">0</td></tr>
-          <tr><td><b>Total</b></td><td class="num emph"><b>8,267</b></td><td class="num">29</td><td class="num">0</td></tr>
+          <tr><td>Root suite (AK-MASTER + Mr. Helix)</td><td class="num emph">5,912</td><td class="num">29</td><td class="num">0</td></tr>
+          <tr><td>HELIX (<code>helix_pipeline/</code>)</td><td class="num emph">2,497</td><td class="num">0</td><td class="num">0</td></tr>
+          <tr><td>Interface in a real browser</td><td class="num emph">47</td><td class="num">0</td><td class="num">0</td></tr>
+          <tr><td><b>Total</b></td><td class="num emph"><b>8,456</b></td><td class="num">29</td><td class="num">0</td></tr>
         </tbody>
       </table>
     </div>
@@ -647,6 +662,6 @@
     <div class="ln">Repository opened for technical due diligence on request.</div>
   </div>
 
-  <div class="foot">HELIX Dossier · prepared 19 August 2026, updated 6 October 2026 (provider, code size, test run) · every figure, formula, and code excerpt obtained by running against the live repository</div>
+  <div class="foot">HELIX Dossier · prepared 19 August 2026, updated 7 October 2026 (three vectors live, human-review rule, AK-MASTER, code size, test run) · every figure, formula, and code excerpt obtained by running against the live repository</div>
 
 </div>

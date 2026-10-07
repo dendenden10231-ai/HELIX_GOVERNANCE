@@ -60,14 +60,14 @@ guide carry their substance in English.
 
 Measured by running against the repository on 19 August 2026 — not recalled,
 not carried forward from an older file. Code size and test count re-measured on
-6 October 2026.
+7 October 2026.
 
 ```
-Python                 200,635 lines across 967 files
+Python                 207,504 lines across 984 files
 Specifications          82,801 lines
-Tests                    8,267 passing, 29 skipped, 0 failing
-HELIX engine            19,003 lines across 71 modules
-Engine files audited        70 of 70, line by line
+Tests                    8,456 passing (5,912 + 2,497 + 47 in a real browser), 0 failing
+HELIX engine            29,335 lines across 92 modules — all three vectors live on the site
+Engine files audited        70 of 70, line by line (August audit)
 Discrepancies fixed         14, each with tests
 Executable patches          38 of 38 enforced, 100% behavioural coverage
 Math operators              44, governed by 10 absolute laws
