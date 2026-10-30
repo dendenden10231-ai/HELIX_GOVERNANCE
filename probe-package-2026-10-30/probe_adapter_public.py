@@ -63,6 +63,14 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
+# The probe's own output contains em dashes and middots. On Windows a reader may
+# run us under a legacy console codepage, where those characters would come out
+# as replacement marks. Force UTF-8 on the shared stdout; no-op on POSIX.
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+except (AttributeError, ValueError):
+    pass
+
 import null_input_probe as probe  # noqa: E402  (deposit's instrument, unmodified)
 
 SEED = 20261028

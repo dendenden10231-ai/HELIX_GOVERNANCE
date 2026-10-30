@@ -90,12 +90,19 @@ silence never looked like compliance.
 
 ## 2. On the disambiguation mirror — acknowledged, reciprocated
 
-Thank you for mirroring the line on helixaiinnovations.ca naming our entity and
-domain, and for stating that no priority is claimed in either direction. We
-claim none either. Our record stands as published: first commit 27 June 2026,
-the name in commit history from 30 July 2026, helixcom.org since 28 August 2026;
-your earliest cited pages are later; your incorporation date is not stated in
-the deposit, so neither side has a priority claim to make.
+Thank you for offering to mirror the line on helixaiinnovations.ca naming our
+entity and domain, and for stating that no priority is claimed in either
+direction. We claim none either. Our record stands as published: first commit 27
+June 2026, the name in commit history from 30 July 2026, helixcom.org since 28
+August 2026; your earliest cited pages are later; your incorporation date is not
+stated in the deposit, so neither side has a priority claim to make.
+
+We checked rather than assumed, because that is the standard you asked us to
+apply: on 30 October 2026 we walked 40 of the 67 pages listed in your sitemap and
+none of them mentions our name or domain yet. So we read your sentence as what it
+says — "I'll mirror", future — and we are not writing it up as accomplished. Say
+the word if you would like our reading corrected, and we will re-check and update
+this document.
 
 We will reciprocate: the same disambiguation line naming **Helix AI Innovations
 Inc. / Innovations Helix IA Inc. and helixaiinnovations.ca** goes on our `/check`

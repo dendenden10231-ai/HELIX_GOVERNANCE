@@ -22,11 +22,15 @@ scorer so a reader can watch your probe catch an answer key without trusting us.
    (CC-BY-ND-4.0, NoDerivatives), not for secrecy; the ids and the selection rule
    are published so the rows can be regenerated.
 
-2. The disambiguation mirror. Thank you for naming our entity and domain on
-helixaiinnovations.ca, and for claiming no priority. We claim none either. The
-reciprocal line naming Helix AI Innovations Inc. and helixaiinnovations.ca goes
-on our /check screen and into the public passport with our next deployment; we
-will send you the URL when it is live.
+2. The disambiguation mirror. Thank you for offering to mirror the line naming
+our entity and domain, and for claiming no priority — we claim none either. To be
+straight rather than merely polite: we checked helixaiinnovations.ca today (40 of
+the 67 pages in your sitemap) and the line is not up yet, so we read your
+sentence as what it says — "I'll mirror" — not as a done deal. We will say so
+plainly when it appears. We make the same promise in the other direction: the
+reciprocal line naming Helix AI Innovations Inc. and helixaiinnovations.ca goes on
+our /check screen and into the public passport with our next deployment, and we
+will send you the URL once it is live.
 
 3. The battery. Yes to a hosted endpoint rather than source, per-position
 discipline, UNTESTED where no genuine reply is supplied. One constraint stated up
