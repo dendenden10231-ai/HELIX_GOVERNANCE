@@ -19,8 +19,8 @@ scorer so a reader can watch your probe catch an answer key without trusting us.
    sections 1 and 2 of our 29 October response are assertions about a private
    production tree, not reader-verifiable checks, and the manifest is an internal
    integrity record. The AggreFact row texts are withheld for a licence reason
-   (CC-BY-ND-4.0, NoDerivatives), not for secrecy; the ids and the selection rule
-   are published so the rows can be regenerated.
+   (CC-BY-ND-4.0, NoDerivatives), not for secrecy; the row keys and the selection
+   rule are published so the rows can be regenerated.
 
 2. The disambiguation mirror. Thank you for offering to mirror the line naming
 our entity and domain, and for claiming no priority — we claim none either. To be
@@ -54,4 +54,4 @@ HELIX / Mr. Helix / AK-MASTER
 denis@helixcom.net · helixcom.org
 
 Full response:
-https://github.com/dendenden10231-ai/HELIX_GOVERNANCE/blob/main/отчеты-qwen/сверка_депозита/response-part2-2026-10-30.md
+https://github.com/dendenden10231-ai/HELIX_GOVERNANCE/blob/main/letters/response-to-helix-ai-innovations-part2-2026-10-30.md
