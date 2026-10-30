@@ -38,12 +38,32 @@ supplied, and it is the behaviour we keep.
 | `null_input_probe.py` | the deposit's instrument, **byte for byte**, SHA-256 in `PROBE_PROVENANCE.md` |
 | `null_model_test.py` | the deposit's second instrument, byte for byte |
 | `probe_adapter_public.py` | our adapter, public copy: same corpora, same seed 20261028, scorer injectable, no import of our engine |
-| `positions_60.json` | the 60 HELIX positions: official row ids, class, origin, model, human label — **no row text** (see `corpus-license-note.md`) |
+| `positions_60.json` | the 60 HELIX positions keyed by **(id, model, origin)**, plus our corpus row index, class, human label and a SHA-256 digest of each summary — **no row text** (see `corpus-license-note.md`) |
 | `results_helix.json`, `results_ak.json`, `results_mr.json` | per-position grades under every arm, machine-readable |
 | `results-per-position.md` | the same, as tables a human can read |
 | `stdout_helix.txt`, `stdout_ak.txt`, `stdout_mr.txt` | the probe's own printed output, unedited |
 | `PROBE_PROVENANCE.md` | hashes, deposit date, run dates |
 | `corpus-license-note.md` | why the AggreFact row texts are not republished, and how to regenerate them |
+
+### A defect found while building this package, published rather than smoothed over
+
+The first version of `positions_60.json` identified each position by its `id`.
+That was wrong, and it would have silently mis-assigned replies for anyone
+regenerating the corpus: `id` is a **document** identifier, not a pair
+identifier. Measured on our 1 117-row corpus: 862 distinct ids cover 1 117 rows,
+and 252 ids appear more than once — BART, T5 and Pegasus claims share the id of
+the document they summarise. Even the triple (id, model, origin) leaves 5
+ambiguous groups somewhere in the corpus. Within these 60 positions all 60
+triples are distinct (51 distinct ids), so the triple selects them exactly, and
+the adapter now matches on (id, model, origin) with a SHA-256 summary digest as
+fallback.
+
+Verified end to end on 30 October 2026: `--instrument helix --corpus <rows>`
+matched **60 of 60** positions by the triple and needed the digest fallback 0
+times; without a corpus the same run still returns UNTESTED on all 60. The
+digest is our integrity metadata, not the row text — if your copy of the release
+differs in whitespace the triple still identifies the row while the digest will
+not match, and that is worth reporting to us rather than working around.
 
 ## Results, restated with their denominators
 

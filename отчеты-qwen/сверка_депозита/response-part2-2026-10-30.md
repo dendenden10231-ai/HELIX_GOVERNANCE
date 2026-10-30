@@ -51,6 +51,20 @@ Verdicts and counts are identical to 28 and 29 October: HELIX core **SENSITIVE
 Mr. Helix quote check **SENSITIVE, 6 of 6**. Per-position grades under every arm
 are published as JSON and as tables, with the probe's own unedited stdout.
 
+**A defect in our own publication, disclosed because you asked for this standard.**
+The first version of the position file keyed each of the 60 rows by `id`. That was
+wrong: `id` is a document identifier, not a pair identifier — in our 1 117-row
+corpus 862 distinct ids cover 1 117 rows and 252 ids repeat, because BART, T5 and
+Pegasus claims share the id of the document they summarise. A reader regenerating
+the corpus by `id` alone would have been handed an ambiguous key and would have
+silently matched the wrong replies. The file now keys positions by
+**(id, model, origin)** — all 60 triples are distinct (51 distinct ids) — plus our
+corpus row index and a SHA-256 digest of each summary as fallback. Verified end to
+end the same day: with a full corpus supplied, **60 of 60** positions matched by
+the triple, digest fallback needed 0 times; without a corpus the run still returns
+UNTESTED on all 60. We found this while building the package you asked for, not
+after someone reported it.
+
 **The licence boundary, stated plainly.** The AggreFact rows are CC-BY-ND-4.0
 (NoDerivatives) and gated. Our working corpus is a derivative — it carries our
 added fields — so we do not republish the text. We publish the official row ids,

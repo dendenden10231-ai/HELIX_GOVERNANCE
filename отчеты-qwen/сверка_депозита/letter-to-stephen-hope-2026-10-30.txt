@@ -8,8 +8,9 @@ points are accepted.
 1. Reproducibility. You were right that a reader could not tell a checked result
 from a reported one. We have published a probe package that runs with no access
 to our code: your null_input_probe.py and null_model_test.py byte for byte with
-their SHA-256 hashes, our adapter with an injectable scorer, the 60 position ids,
-and per-position grades under every arm. It includes a deliberately broken
+their SHA-256 hashes, our adapter with an injectable scorer, the 60 positions
+keyed by (id, model, origin) with a SHA-256 summary digest each, and
+per-position grades under every arm. It includes a deliberately broken
 scorer so a reader can watch your probe catch an answer key without trusting us.
 
    https://github.com/dendenden10231-ai/HELIX_GOVERNANCE/tree/main/probe-package-2026-10-30

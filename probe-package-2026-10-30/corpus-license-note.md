@@ -30,25 +30,41 @@ What we publish instead is everything that is ours or is mere identification:
 ## How to regenerate the same 60 positions
 
 1. Accept the terms and download the official test split.
-2. Build a jsonl with one object per row carrying at least `id` and the
+2. Build a jsonl with one object per row carrying `id`, `model`, `origin`, the
    summary/claim text (our field name is `пересказ`; the adapter also accepts
    `summary` or `claim`) and the source article (`статья`).
 3. Select, **in corpus file order, no random sampling**: the first 30 rows whose
    recorded HELIX status is not `NO_NUMBERS`, then the first 30 rows whose
    recorded status is `NO_NUMBERS`. That is the whole selection rule; it is
-   deterministic given the same corpus file.
-4. Run:
+   deterministic given the same corpus file. If you would rather not reproduce
+   the rule, take the rows named in `positions_60.json` — but read step 4 first.
+4. Match rows by the **triple (id, model, origin)**, never by `id` alone. `id`
+   identifies a document, not a pair: in our 1 117-row corpus 862 distinct ids
+   cover 1 117 rows and 252 ids repeat, because BART, T5 and Pegasus claims share
+   the id of the document they summarise. Within these 60 positions all 60
+   triples are distinct (51 distinct ids), so the triple is an exact key; each
+   position also carries a SHA-256 digest of its summary text as a fallback, and
+   our own corpus row index (`corpus_row_index`) for reference. This was found
+   while building the package: an earlier version of the position file keyed on
+   `id` alone and would have mis-assigned replies.
+5. Run:
 
 ```bash
 python probe_adapter_public.py --instrument helix --scorer my_scorer.py --corpus my_aggrefact.jsonl
 ```
 
+Verified end to end on 30 October 2026 with a full corpus supplied as `--corpus`:
+**60 of 60** positions matched by the triple, digest fallback needed 0 times.
+
 `my_scorer.py` exposes `score(text, test_id) -> str`, where `test_id` is the
 position index `"0".."59"`. The source article is **not** passed to `score()`;
 look it up yourself from `positions_60.json` by position index. If you supply no
-`--corpus`, all 60 positions come back **UNTESTED** — verified on 30 October
+`--corpus`, all 60 positions come back **UNTESTED** — also verified on 30 October
 2026. That is the deposit's rule and we keep it: without a genuine reply there
-is nothing to compare against.
+is nothing to compare against. If your summary text differs in whitespace from
+ours, the triple still identifies the row while the digest will not match; tell
+us rather than working around it, because that would mean our corpus normalised
+something we never documented.
 
 ## One nuance worth stating, because it changes a denominator
 

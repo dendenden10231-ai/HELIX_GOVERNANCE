@@ -53,6 +53,7 @@ WHAT THIS DOES NOT DO
 from __future__ import annotations
 
 import argparse
+import hashlib
 import importlib.util
 import json
 import random
@@ -138,19 +139,43 @@ def load_scorer(path: str):
 def helix_replies(corpus: Path | None, n: int) -> list[str | None]:
     """Genuine replies for the 60 HELIX positions, taken from the reader's own
     copy of the official release. Without them every position is UNTESTED —
-    that is the deposit's rule and we keep it."""
+    that is the deposit's rule and we keep it.
+
+    Rows are matched by the triple (id, model, origin), NOT by id alone: id
+    identifies a document, and several summariser models (BART, T5, Pegasus)
+    contribute claims to the same document. Across our 1 117-row corpus 862
+    distinct ids cover 1 117 rows and 252 ids repeat; within these 60 positions
+    all 60 triples are distinct, so the triple selects them exactly. If your
+    rows carry no model/origin fields, the adapter falls back to matching the
+    SHA-256 digest of the summary text published in positions_60.json.
+    """
     if corpus is None:
         return [None] * n
-    positions = json.loads((HERE / "positions_60.json").read_text(encoding="utf-8"))["positions"]
-    wanted = {p["id"]: p["position"] for p in positions}
+    pos = json.loads((HERE / "positions_60.json").read_text(encoding="utf-8"))["positions"]
+    by_key = {(p["id"], p["model"], p["origin"]): p["position"] for p in pos}
+    by_digest = {p["summary_sha256"]: p["position"] for p in pos}
     replies: list[str | None] = [None] * n
+    hit_key = hit_digest = 0
     for line in corpus.read_text(encoding="utf-8").splitlines():
         if not line.strip():
             continue
         row = json.loads(line)
-        rid = row.get("id")
-        if rid in wanted:
-            replies[wanted[rid]] = row.get("пересказ") or row.get("summary") or row.get("claim")
+        text = row.get("пересказ") or row.get("summary") or row.get("claim") or ""
+        idx = by_key.get((row.get("id"), row.get("model"), row.get("origin")))
+        if idx is not None:
+            hit_key += 1
+        elif text:
+            idx = by_digest.get(hashlib.sha256(text.encode("utf-8")).hexdigest())
+            if idx is not None:
+                hit_digest += 1
+        if idx is not None:
+            replies[idx] = text
+    got = sum(1 for r in replies if r is not None)
+    print(f"  corpus rows matched to positions: {got} of {n} "
+          f"(by id+model+origin: {hit_key}, by summary digest: {hit_digest})")
+    if got < n:
+        print(f"  {n - got} positions found no reply in your corpus: they will report UNTESTED, "
+              f"not as a pass. Check that your rows carry id/model/origin or the exact summary text.")
     return replies
 
 
